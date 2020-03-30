@@ -19,8 +19,6 @@ public class Apuntar : MonoBehaviour
     public float velocidad = 1;
     private Vector3 move;
 
-    //poner shader de outlines y activar al ver
-
     private void Awake()
     {
         anim = Point.GetComponent<Animator>();
@@ -36,11 +34,9 @@ public class Apuntar : MonoBehaviour
             {
                 if (objMirando != null && objMirando.GetComponent<Outline>() != null)
                 {
-                    Debug.Log(objMirando.name);
                     objMirando.GetComponent<Outline>().enabled = false;
                 }
                 objMirando = hit.collider.gameObject;
-                Debug.Log(objMirando.name);
 
                 cPointer.planeDistance = cPointerDist;
                 eventSys.SetSelectedGameObject(null);
@@ -54,7 +50,8 @@ public class Apuntar : MonoBehaviour
                 }
                 else
                 {
-                    objMirando.GetComponent<Outline>().enabled = true;
+                    if(objMirando.GetComponent<Outline>()!=null)
+                        objMirando.GetComponent<Outline>().enabled = true;
                 }
             }
 
@@ -84,6 +81,7 @@ public class Apuntar : MonoBehaviour
                 if (objMirando.GetComponent<Outline>() != null)
                 {
                     objMirando.GetComponent<Outline>().enabled = false;
+                    objMirando.GetComponent<Prueba>().NoEstaColisionando();
                 }
                 objMirando = null;
                 cPointer.planeDistance = cPointerDist;

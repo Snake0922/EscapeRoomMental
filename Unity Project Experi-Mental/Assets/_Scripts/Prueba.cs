@@ -4,26 +4,23 @@ using UnityEngine;
 
 public class Prueba : MonoBehaviour
 {
-    public Transform camara;
-    private bool agarrado;
-    private Transform original;
-
+    public enum Estado { NoEstoyColisionando, EstoyColisionando, MePresionaron}
+    public Estado estado;
     private void Awake()
     {
-        original = transform.parent;
+        estado = Estado.NoEstoyColisionando;
     }
 
-    public void DejarseMover()
+    public void Presionar()
     {
-        if (agarrado)
-        {
-            agarrado = false;
-            transform.parent = original;
-        }
-        else
-        {
-            agarrado = true;
-            transform.parent = camara;
-        }
+        estado = Estado.MePresionaron;
+    }
+    public void NoEstaColisionando()
+    {
+        estado = Estado.NoEstoyColisionando;
+    }
+    public void EstaColisionando()
+    {
+        estado = Estado.EstoyColisionando;
     }
 }
