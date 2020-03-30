@@ -1,0 +1,24 @@
+Puzzle de Lineas
+Referente: https://www.youtube.com/watch?v=EWqI-FTHXdw&list=PLJ4VW1nTAWXejZ2UTYtQ30cUhMui5Ffn5&
+Descripción: el jugador debe mover dos lineas al mismo tiempo, llevandolas hacia un punto determinado
+
+Puzzle de Flujo
+Referente: https://www.youtube.com/watch?v=5MRiYFL6Kxk
+Descripción: el jugador debe alinear objetos que permitan dirigir un flujo de energía para que llegue a determinado lugar.
+
+Puzzle "Tile"
+Referente: https://www.youtube.com/watch?v=NXRIrP1k4dE
+Descripción: el jugador debe deslizar cuadros por un tablero hasta que los mismos estén en orden y formen una imagen.
+Ejemplo: ¿Esto es lo mejor que puedes hacer? ¿Cualquiera podría hacer esto? ¿Seguro hiciste trampa?
+
+Puzzle Tangram
+Referente: "Video en grupo de WhatsApp"
+Descripción: el jugador debe organizar varias figuras geometricas para completa una figura más grande.
+
+Puzzle Engranajes
+Referente: https://www.youtube.com/watch?v=vOhVIK6lb1g
+Descripción: el jugador debe organizar engranajes en un orden determinado para hacer funcionar el mecanismo.
+
+Puzzle de Simbolos
+Referente: https://www.youtube.com/watch?v=4ossH4OmpfU
+Descripción: el jugador debe posicionar simbolos en determinados lugares para completar el puzzle
