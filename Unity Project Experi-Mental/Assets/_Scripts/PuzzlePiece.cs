@@ -8,16 +8,25 @@ public class PuzzlePiece : MonoBehaviour
     public bool press = false;
     public Transform piece;
     private Vector3 startPos;
-    public bool collision = false;
+    private Vector3 startRot;
+    public bool _collisionTrigger = false;
+    public bool _collision = false;
     public GameObject checker;
     public string nameTag;
     public static int piecesCompleted = 0;
     public int alternativeAngleCorrect = 999, alternativeAngleCorrect2 = 999;
     public Transform myParent;
     public RotateController rotateController;
+
+    [Header("Clamp Position")]
+    public float minX;
+    public float maxX;
+    public float minY;
+    public float maxY;
     private void Start()
     {
         startPos = piece.transform.position;
+        startRot = piece.transform.rotation.eulerAngles;
         myParent = transform.parent;
         rotateController = GetComponentInParent<RotateController>();
     }
@@ -36,20 +45,22 @@ public class PuzzlePiece : MonoBehaviour
     }
     private void Update()
     {
-        if(press)
+        if(press && !_collision)
         {
             piece.transform.position = new Vector3(point.position.x, point.position.y, piece.transform.position.z);
         }
         else
         {
-            if (!collision)
+            if (!_collisionTrigger)
             {
                 piece.transform.position = startPos;
+                piece.transform.rotation = Quaternion.Euler(startRot);
             }
             else
             {
                 if (myParent.transform.localScale == checker.transform.localScale)
                 {
+
                     if ((int)myParent.transform.rotation.eulerAngles.z == (int)checker.transform.rotation.eulerAngles.z || (int)myParent.transform.rotation.eulerAngles.z == alternativeAngleCorrect || (int)myParent.transform.rotation.eulerAngles.z == alternativeAngleCorrect2)
                     {
                         myParent.transform.position = new Vector3(checker.transform.position.x, checker.transform.position.y, myParent.transform.position.z);
@@ -70,9 +81,10 @@ public class PuzzlePiece : MonoBehaviour
                     else
                     {
                         piece.transform.position = startPos;
+                        piece.transform.rotation = Quaternion.Euler(startRot);
                     }
                 }
-
+                
             }   
         }
     }
@@ -87,7 +99,7 @@ public class PuzzlePiece : MonoBehaviour
     {
         if (other.gameObject.CompareTag(nameTag)) //Cada pieza debe tener el nameTag correspondiente al mismo nombre que debe tener el Tag de la pieza a armar
         {
-            collision = true;
+            _collisionTrigger = true;
             checker = other.transform.gameObject;
         }
     }
@@ -95,8 +107,20 @@ public class PuzzlePiece : MonoBehaviour
     {
         if (other.gameObject.CompareTag(nameTag))
         {
-            collision = false;
+            _collisionTrigger = false;
             checker = null;
         }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        _collision = true;
+        piece.transform.position = startPos;
+        piece.transform.rotation = Quaternion.Euler(startRot);
+        press = false;
+    }
+    private void OnCollisionExit(Collision collision)
+    {
+        _collision = false;
     }
 }

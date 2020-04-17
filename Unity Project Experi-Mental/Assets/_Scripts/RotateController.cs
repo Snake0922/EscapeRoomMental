@@ -15,7 +15,7 @@ public class RotateController : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Q))
         {
-            currentDraggingPiece.transform.Rotate(0, 0, -anglesToRotate);
+            currentDraggingPiece.transform.Rotate(0, 0, -anglesToRotate);;
         }
     }
 }

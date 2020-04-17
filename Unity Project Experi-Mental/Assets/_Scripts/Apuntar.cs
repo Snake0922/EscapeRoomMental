@@ -51,7 +51,11 @@ public class Apuntar : MonoBehaviour
                 else
                 {
                     if(objMirando.GetComponent<Outline>()!=null)
+                    {
                         objMirando.GetComponent<Outline>().enabled = true;
+                        objMirando.GetComponent<ActivarAccion>().OnTriggerEnter.Invoke();
+                    }
+                        
                 }
             }
 
@@ -70,7 +74,7 @@ public class Apuntar : MonoBehaviour
                 }
                 else if (objMirando.GetComponent<ActivarAccion>() != null)
                 {
-                    objMirando.GetComponent<ActivarAccion>().evento.Invoke();
+                    objMirando.GetComponent<ActivarAccion>().Press.Invoke();
                 }
             }
         }
@@ -81,7 +85,7 @@ public class Apuntar : MonoBehaviour
                 if (objMirando.GetComponent<Outline>() != null)
                 {
                     objMirando.GetComponent<Outline>().enabled = false;
-                    objMirando.GetComponent<Prueba>().NoEstaColisionando();
+                    objMirando.GetComponent<ActivarAccion>().OnTriggerExit.Invoke();
                 }
                 objMirando = null;
                 cPointer.planeDistance = cPointerDist;
