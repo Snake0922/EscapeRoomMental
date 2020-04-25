@@ -64,8 +64,8 @@ public class PuzzlePiece : MonoBehaviour
                     if ((int)myParent.transform.rotation.eulerAngles.z == (int)checker.transform.rotation.eulerAngles.z || (int)myParent.transform.rotation.eulerAngles.z == alternativeAngleCorrect || (int)myParent.transform.rotation.eulerAngles.z == alternativeAngleCorrect2)
                     {
                         myParent.transform.position = new Vector3(checker.transform.position.x, checker.transform.position.y, myParent.transform.position.z);
-                        Destroy(checker.GetComponent<Outline>());
-                        Destroy(gameObject.GetComponent<Outline>());
+                        Destroy(checker.GetComponent<Outline2>());
+                        Destroy(gameObject.GetComponent<Outline2>());
                         Destroy(checker);
                         if (piecesCompleted < 5)
                         {

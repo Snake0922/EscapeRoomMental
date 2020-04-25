@@ -32,9 +32,16 @@ public class Apuntar : MonoBehaviour
         {
             if (objMirando != hit.collider.gameObject)
             {
-                if (objMirando != null && objMirando.GetComponent<Outline>() != null)
+                if (objMirando != null)
                 {
-                    objMirando.GetComponent<Outline>().enabled = false;
+                    if (objMirando.GetComponent<Outline2>() != null)
+                    {
+                        objMirando.GetComponent<Outline2>().enabled = false;
+                    }
+                    if (objMirando.GetComponent<Outline>() != null)
+                    {
+                        objMirando.GetComponent<Outline>().enabled = false;
+                    }
                 }
                 objMirando = hit.collider.gameObject;
 
@@ -50,12 +57,17 @@ public class Apuntar : MonoBehaviour
                 }
                 else
                 {
-                    if(objMirando.GetComponent<Outline>()!=null)
+                    if(objMirando.GetComponent<Outline2>()!=null)
+                    {
+                        objMirando.GetComponent<Outline2>().enabled = true;
+                        objMirando.GetComponent<ActivarAccion>().OnTriggerEnter.Invoke();
+                    }
+                    if (objMirando.GetComponent<Outline>() != null)
                     {
                         objMirando.GetComponent<Outline>().enabled = true;
                         objMirando.GetComponent<ActivarAccion>().OnTriggerEnter.Invoke();
                     }
-                        
+
                 }
             }
 
@@ -82,6 +94,11 @@ public class Apuntar : MonoBehaviour
         {
             if (objMirando != null)
             {
+                if (objMirando.GetComponent<Outline2>() != null)
+                {
+                    objMirando.GetComponent<Outline2>().enabled = false;
+                    objMirando.GetComponent<ActivarAccion>().OnTriggerExit.Invoke();
+                }
                 if (objMirando.GetComponent<Outline>() != null)
                 {
                     objMirando.GetComponent<Outline>().enabled = false;
