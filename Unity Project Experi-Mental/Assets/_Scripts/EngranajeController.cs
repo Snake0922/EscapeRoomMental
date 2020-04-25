@@ -10,6 +10,8 @@ public class EngranajeController : MonoBehaviour
     public float speed;
     public MeshRenderer boton;
     public Material amarillo, azul;
+    public GameObject previousGear, nextGear;
+    
     private void Start()
     {
         puzzleEngranajesController = GetComponentInParent<PuzzleEngranajesController>();
@@ -35,6 +37,25 @@ public class EngranajeController : MonoBehaviour
             {
                 puzzleEngranajesController.combinacionesActuales[identificador] = -1;
                 boton.material = azul;
+            }
+        }
+        if (Input.GetKeyDown(KeyCode.N))
+        {
+            if (Ready && previousGear!=null)
+            {
+                Vector3 currentPositionBeforeToChange = transform.position;
+                transform.position = previousGear.transform.position;
+                previousGear.transform.position = currentPositionBeforeToChange;
+            }
+
+        }
+        if (Input.GetKeyDown(KeyCode.M))
+        {
+            if (Ready && nextGear != null)
+            {
+                Vector3 currentPositionBeforeToChange = transform.position;
+                transform.position = nextGear.transform.position;
+                nextGear.transform.position = currentPositionBeforeToChange;
             }
         }
     }

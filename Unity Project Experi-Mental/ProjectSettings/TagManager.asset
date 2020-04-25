@@ -3,7 +3,15 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - TangramTrianguloGrande1
+  - "TangramPeque\xF1o1"
+  - Engranaje
+  - TangramTrianguloGrande2
+  - TangramCubo
+  - "TangramPeque\xF1o2"
+  - TangramTrianguloMediano
+  - Null
   layers:
   - Default
   - TransparentFX
