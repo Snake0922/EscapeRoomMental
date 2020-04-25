@@ -6,9 +6,9 @@ public class PuzzleEngranajesController : MonoBehaviour
 {
     public int[] combinacionesCorrectas; //la  cantidad de enteros serán equivalentes al mismo numero de engranajes, y será 1 para los engranajes que deban girar con el reloj, y -1 para los engranajes que deban girar contrario al reloj
     public int[] combinacionesActuales; //estos valores seran los que vayan equivaliendo dependiendo de las acciones del usuario. Al final se validaran si estos valores coinciden con los correctos para validar o no el puzzle
-    public static PuzzleEngranajesController instance;
     public bool checking = false;
     public GameObject[] engranajes;
+    public static PuzzleEngranajesController instance;
     private void Awake()
     {
         if(instance!=null)
