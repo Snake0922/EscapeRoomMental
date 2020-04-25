@@ -31,8 +31,8 @@ public class PuzzleEngranajesController : MonoBehaviour
         checking = true;
 
         if(combinacionesActuales[0]==combinacionesCorrectas[0] &&
-            combinacionesActuales[1] == combinacionesCorrectas[1] &&
-            combinacionesActuales[2] == combinacionesCorrectas[3])
+           combinacionesActuales[1] == combinacionesCorrectas[1] &&
+            combinacionesActuales[2] == combinacionesCorrectas[2])
 
             {
                 Debug.Log("puzzle correcto");

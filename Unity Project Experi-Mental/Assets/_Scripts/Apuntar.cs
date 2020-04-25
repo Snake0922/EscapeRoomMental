@@ -18,7 +18,6 @@ public class Apuntar : MonoBehaviour
     public CharacterController cControler;
     public float velocidad = 1;
     private Vector3 move;
-
     private void Awake()
     {
         anim = Point.GetComponent<Animator>();
@@ -43,6 +42,11 @@ public class Apuntar : MonoBehaviour
                         objMirando.GetComponent<Outline>().enabled = false;
                     }
                 }
+                if (objMirando != null)
+                {
+                    objMirando.GetComponent<ActivarAccion>().OnTriggerExit.Invoke();
+                }
+
                 objMirando = hit.collider.gameObject;
 
                 cPointer.planeDistance = cPointerDist;
