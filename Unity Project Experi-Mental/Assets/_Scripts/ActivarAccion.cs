@@ -5,5 +5,7 @@ using UnityEngine.Events;
 
 public class ActivarAccion : MonoBehaviour
 {
-    public UnityEvent evento;
+    public UnityEvent Press;
+    public UnityEvent OnTriggerEnter;
+    public UnityEvent OnTriggerExit;
 }

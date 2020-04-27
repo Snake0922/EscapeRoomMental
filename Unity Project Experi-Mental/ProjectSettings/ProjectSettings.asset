@@ -61,7 +61,7 @@ PlayerSettings:
   useOSAutorotation: 1
   use32BitDisplayBuffer: 0
   preserveFramebufferAlpha: 0
-  disableDepthAndStencilBuffers: 0
+  disableDepthAndStencilBuffers: 1
   androidStartInFullscreen: 1
   androidRenderOutsideSafeArea: 0
   androidUseSwappy: 1
@@ -178,7 +178,7 @@ PlayerSettings:
   APKExpansionFiles: 0
   keepLoadedShadersAlive: 0
   StripUnusedMeshComponents: 1
-  VertexChannelCompressionMask: 4054
+  VertexChannelCompressionMask: -1
   iPhoneSdkVersion: 988
   iOSTargetOSVersionString: 10.0
   tvOSSdkVersion: 0
@@ -433,11 +433,10 @@ PlayerSettings:
     m_Enabled: 1
     m_Devices:
     - cardboard
-    - MockHMD
   - m_BuildTarget: Standalone
     m_Enabled: 1
     m_Devices: []
-  openGLRequireES31: 0
+  openGLRequireES31: 1
   openGLRequireES31AEP: 0
   openGLRequireES32: 0
   m_TemplateCustomTags: {}
@@ -448,7 +447,10 @@ PlayerSettings:
   m_BuildTargetGroupLightmapEncodingQuality:
   - m_BuildTarget: Standalone
     m_EncodingQuality: 1
-  m_BuildTargetGroupLightmapSettings: []
+  m_BuildTargetGroupLightmapSettings:
+  - m_BuildTarget: Android
+    m_TextureStreamingEnabled: 1
+    m_TextureStreamingPriority: 0
   playModeTestRunnerEnabled: 0
   runPlayModeTestAsEditModeTest: 0
   actionOnDotNetUnhandledException: 1
@@ -639,6 +641,7 @@ PlayerSettings:
   ps4UseResolutionFallback: 0
   ps4ReprojectionSupport: 0
   ps4UseAudio3dBackend: 0
+  ps4UseLowGarlicFragmentationMode: 1
   ps4SocialScreenEnabled: 0
   ps4ScriptOptimizationLevel: 0
   ps4Audio3dVirtualSpeakerCount: 14
@@ -755,6 +758,7 @@ PlayerSettings:
   XboxOnePersistentLocalStorageSize: 0
   XboxOneXTitleMemory: 8
   XboxOneOverrideIdentityName: 
+  XboxOneOverrideIdentityPublisher: 
   vrEditorSettings:
     daydream:
       daydreamIconForeground: {fileID: 0}
