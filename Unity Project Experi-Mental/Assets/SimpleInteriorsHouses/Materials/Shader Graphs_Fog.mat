@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Shader Graphs_Fog
+  m_Shader: {fileID: -6465566751694194690, guid: 66776b8872858714a8966f63f824ef71,
+    type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _Texture2DAsset_AA538E86_Out_0:
+        m_Texture: {fileID: 2800000, guid: 0f2307a4b30f8114da10263c7159a6f0, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Triplanar_B58DE80_Texture_1:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - Vector1_297DED7B: 100
+    - Vector1_38BE548B: 0
+    - Vector1_3D663E18: 1
+    - Vector1_677677C0: 1
+    - Vector1_B4CFF76A: 0.5
+    m_Colors:
+    - Vector2_1F648FF9: {r: 10, g: 5, b: 0, a: 0}
+    - Vector2_588E62D1: {r: 10, g: 0, b: 0, a: 0}
+    - Vector2_A863ED3F: {r: 0, g: 0, b: 0, a: 0}
+    - Vector2_BC0D1410: {r: -1, g: 0.75, b: 0, a: 0}
