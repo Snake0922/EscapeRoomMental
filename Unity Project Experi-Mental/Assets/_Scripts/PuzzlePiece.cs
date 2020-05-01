@@ -23,6 +23,9 @@ public class PuzzlePiece : MonoBehaviour
     public float maxX;
     public float minY;
     public float maxY;
+
+    [Header("Ansiety")]
+    public AnsietyController ansietyController;
     private void Start()
     {
         startPos = piece.transform.position;
@@ -71,6 +74,7 @@ public class PuzzlePiece : MonoBehaviour
                         {
                             piecesCompleted++;
                             Debug.Log(piecesCompleted);
+                            ansietyController.AnsietyLevel(-5);
                         }
                         else
                         {
