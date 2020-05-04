@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
+#if UNITY_EDITOR
 [CustomEditor(typeof(OptimizeMesh))]
 public class LevelScriptEditor : Editor
 {
@@ -66,3 +67,4 @@ public class OptimizeMesh : MonoBehaviour
         }
     }
 }
+#endif
