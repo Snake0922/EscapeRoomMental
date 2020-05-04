@@ -27,12 +27,12 @@ public class IntroVideo : MonoBehaviour
     {
         if (start)
         {
-            if (!end && vPlayer.time >= 17.5f/*18.2f*/)
+            if (!end && vPlayer.time >= /*17.5f*/18.2f)
             {
                 end = true;
                 Debug.Log("end");
-                Initiate.Fade("Lineas", Color.black, 0.5f);
-                //SceneManager.LoadScene("Lineas");
+                //Initiate.Fade("Lineas", Color.black, 0.5f);
+                SceneManager.LoadScene("Lineas");
 
                 Debug.Log("Corregir fade de escenas en vr");
             }
