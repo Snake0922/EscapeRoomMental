@@ -20,7 +20,7 @@ public class EngranajeController : MonoBehaviour
     {
         if(puzzleEngranajesController.checking)
         {
-            transform.RotateAround(transform.position, Vector3.back, (speed* puzzleEngranajesController.combinacionesActuales[identificador]) * Time.deltaTime);
+            transform.RotateAround(transform.position, Vector3.right, (speed* puzzleEngranajesController.combinacionesActuales[identificador]) * Time.deltaTime);
         }
         if (Input.GetKeyDown(KeyCode.E))
         {

@@ -9,6 +9,14 @@ public class AnsietyController : MonoBehaviour
     public float ansietyValue;
     public float seconds;
     public float ansietyIncrement;
+
+    private WaitForSecondsRealtime segundos;
+
+    private void Awake()
+    {
+        segundos = new WaitForSecondsRealtime(seconds);
+    }
+
     private void Start()
     {
         ansietySlider.value = ansietyValue;
@@ -16,7 +24,7 @@ public class AnsietyController : MonoBehaviour
     }
     IEnumerator AumentarAnsiedad()
     {
-        yield return new WaitForSeconds(seconds);
+        yield return segundos;
         ansietyValue += ansietyIncrement;
         ansietySlider.value = ansietyValue;
         StartCoroutine(AumentarAnsiedad());

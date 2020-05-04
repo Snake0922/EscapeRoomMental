@@ -2,12 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class Timer : MonoBehaviour
 {
     public float secondsTotals;
     public float minutesTotals;
-    public Text TimerText;
+    public TextMeshProUGUI TimerText;
+
+    private readonly WaitForSecondsRealtime unSegundo = new WaitForSecondsRealtime(1);
+
     private void Start()
     {
         StartCoroutine(_Timer());
@@ -16,7 +20,7 @@ public class Timer : MonoBehaviour
 
     private IEnumerator _Timer()
     {
-        yield return new WaitForSeconds(1);
+        yield return unSegundo;
         if (secondsTotals > 0)
         {
             secondsTotals--;
@@ -30,6 +34,6 @@ public class Timer : MonoBehaviour
             }
         }
         TimerText.text = minutesTotals.ToString("00") + ":" + secondsTotals.ToString("00");
-        StartCoroutine("_Timer");
+        StartCoroutine(_Timer());
     }
 }

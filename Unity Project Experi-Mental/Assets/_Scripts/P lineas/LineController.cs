@@ -1,14 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
-using UnityEditor;
-using UnityEditor.Recorder;
 using UnityEngine;
-using UnityEngine.Rendering;
 using UnityEngine.UI;
 
 public class LineController : MonoBehaviour
 {
+    public PasoPuzzles pPuzzle;
+    [Space]
     public LineRenderer[] lRender;
     public RectTransform pointerOffset;
     public RectTransform pointerFlip;
@@ -129,6 +127,7 @@ public class LineController : MonoBehaviour
             }
             Finalizo = true;
             Debug.Log("Finalizo");
+            pPuzzle.TerminadoLineas();
             return true;
         }
         else

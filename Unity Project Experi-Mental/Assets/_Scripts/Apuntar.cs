@@ -42,10 +42,10 @@ public class Apuntar : MonoBehaviour
                         objMirando.GetComponent<Outline>().enabled = false;
                     }
                 }
-                if (objMirando != null)
+                /*if (objMirando != null)
                 {
                     objMirando.GetComponent<ActivarAccion>().OnTriggerExit.Invoke();
-                }
+                }*/
 
                 objMirando = hit.collider.gameObject;
 

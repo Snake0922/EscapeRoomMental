@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PuzzlePiece : MonoBehaviour
 {
+    public PasoPuzzles pPuzzle;
+    [Space]
     public Transform point;
     public bool press = false;
     public Transform piece;
@@ -73,7 +75,7 @@ public class PuzzlePiece : MonoBehaviour
                         if (piecesCompleted < 5)
                         {
                             piecesCompleted++;
-                            Debug.Log(piecesCompleted);
+                            //Debug.Log(piecesCompleted);
                             ansietyController.AnsietyLevel(-5);
                         }
                         else
@@ -95,6 +97,7 @@ public class PuzzlePiece : MonoBehaviour
     IEnumerator FinishTangram()
     {
         Debug.Log("Puzzle terminado");
+        pPuzzle.TerminadoTangram();
         yield return new WaitForSeconds(2.5f);
         Debug.Log("Realizando animacion");
         yield return null;
