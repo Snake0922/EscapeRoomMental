@@ -17,6 +17,7 @@ public class PasoPuzzles : MonoBehaviour
     public Volume postV;
     private ChromaticAberration chromatic;
     private ColorAdjustments colorAd;
+    private Vignette vig;
     public AnsietyController ansiController;
 
     private bool sostenerLlave;
@@ -42,8 +43,10 @@ public class PasoPuzzles : MonoBehaviour
 
         postV.profile.TryGet<ChromaticAberration>(out chromatic);
         postV.profile.TryGet<ColorAdjustments>(out colorAd);
+        postV.profile.TryGet<Vignette>(out vig);
         chromatic.intensity.value = chromaticVal;
         colorAd.contrast.value = contrastVal;
+        vig.intensity.value = contrastVal;
 
         outlineLlave1.SetActive(false);
         outlineLlave2.SetActive(false);
@@ -52,29 +55,36 @@ public class PasoPuzzles : MonoBehaviour
 
     private void Update()
     {
-        if (barraEstres.value >= 75)
+        if (barraEstres.value >= 50)
         {
-            chromaticVal = ((barraEstres.value / 100) - 0.75f) * 4;
+            chromaticVal = ((barraEstres.value / 100) - 0.5f) * 2;
             chromatic.intensity.value = chromaticVal;
         }
         else if (chromatic.intensity.value != 0)
         {
             chromatic.intensity.value = 0;
         }
-        if (barraEstres.value >= 50)
+        if (barraEstres.value >= 75)
         {
-            contrastVal = ((barraEstres.value / 100) - 0.5f) * 2;
-            colorAd.contrast.value = contrastVal;
+            contrastVal = ((barraEstres.value / 100) - 0.75f) * 2;
+            vig.intensity.value = contrastVal;
         }
         else if (colorAd.contrast.value != 0)
         {
             colorAd.contrast.value = 0;
         }
+        colorAd.contrast.value = barraEstres.value * 0.75f;
 
         if (sostenerLlave)
         {
             Llaves.transform.position = posSostenida.position;
         }
+    }
+    
+    public void BajarAnsiedad(float val)
+    {
+        barraEstres.value = Mathf.Clamp(barraEstres.value - val, 0, 100);
+        ansiController.ansietyValue -= val;
     }
 
     public void sostenLlave()
@@ -92,8 +102,8 @@ public class PasoPuzzles : MonoBehaviour
         Llaves.SetActive(true);
         Llaves.transform.position = posLlaves2.position;
         Tan_obj.SetActive(false);
-        barraEstres.value = Mathf.Clamp(barraEstres.value - bajadaXpuzzle, 0, 100);
-        ansiController.ansietyValue -= bajadaXpuzzle;
+        //barraEstres.value = Mathf.Clamp(barraEstres.value - bajadaXpuzzle, 0, 100);
+        //ansiController.ansietyValue -= bajadaXpuzzle;
         outlineLlave3.SetActive(true);
     }
 
@@ -107,8 +117,8 @@ public class PasoPuzzles : MonoBehaviour
         Llaves.SetActive(true);
         Llaves.transform.position = posLlaves3.position;
         Lin_obj.SetActive(false);
-        barraEstres.value = Mathf.Clamp(barraEstres.value - bajadaXpuzzle, 0, 100);
-        ansiController.ansietyValue -= bajadaXpuzzle;
+        //barraEstres.value = Mathf.Clamp(barraEstres.value - bajadaXpuzzle, 0, 100);
+        //ansiController.ansietyValue -= bajadaXpuzzle;
         outlineLlave1.SetActive(true);
     }
 
