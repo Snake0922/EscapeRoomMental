@@ -37,7 +37,7 @@ public class PuzzleEngranajesController : MonoBehaviour
         combinacionesActuales[1] == combinacionesCorrectas[1] &&
         combinacionesActuales[2] == combinacionesCorrectas[2])
         {
-            if(GearRed.transform.position==posicionesEngranajesCorrectas[0] &&
+            if(GearRed.transform.position==posicionesEngranajesCorrectas[0] && //El orden correcto es ROJO, AZUL, BLANCO
             GearBlue.transform.position == posicionesEngranajesCorrectas[1] &&
             GearWhite.transform.position == posicionesEngranajesCorrectas[2])
             {

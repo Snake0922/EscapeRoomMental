@@ -46,13 +46,14 @@ public class PuzzlePiece : MonoBehaviour
         {
             press = false;
             rotateController.currentDraggingPiece = null;
+            ansietyController.AnsietyLevel(5);
         }
     }
     private void Update()
     {
         if(press && !_collision)
         {
-            piece.transform.position = new Vector3(point.position.x, point.position.y, piece.transform.position.z);
+            piece.transform.position = new Vector3(point.position.x, point.position.y, piece.transform.position.z);  
         }
         else
         {
@@ -60,6 +61,7 @@ public class PuzzlePiece : MonoBehaviour
             {
                 piece.transform.position = startPos;
                 piece.transform.rotation = Quaternion.Euler(startRot);
+                
             }
             else
             {
@@ -76,10 +78,12 @@ public class PuzzlePiece : MonoBehaviour
                         {
                             piecesCompleted++;
                             //Debug.Log(piecesCompleted);
-                            ansietyController.AnsietyLevel(-5);
+                            ansietyController.AnsietyLevel(-10);
+                            this.enabled = false;
                         }
                         else
                         {
+                            ansietyController.AnsietyLevel(-10);
                             StartCoroutine(FinishTangram());
                         }
                         this.enabled = false;
@@ -87,10 +91,10 @@ public class PuzzlePiece : MonoBehaviour
                     else
                     {
                         piece.transform.position = startPos;
+                        ansietyController.AnsietyLevel(5);
                         piece.transform.rotation = Quaternion.Euler(startRot);
                     }
                 }
-                
             }   
         }
     }
