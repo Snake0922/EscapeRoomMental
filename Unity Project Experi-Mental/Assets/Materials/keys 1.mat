@@ -74,11 +74,7 @@ Material:
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 0.2509804}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-<<<<<<< HEAD
     - _EmissionColor: {r: 1.6055588, g: 1.6055588, b: 0, a: 1}
-=======
-    - _EmissionColor: {r: 1.8702998, g: 1.8702998, b: 0, a: 1}
->>>>>>> parent of 3b868ce... no message
     - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
 --- !u!114 &8212518541126021157
 MonoBehaviour:
