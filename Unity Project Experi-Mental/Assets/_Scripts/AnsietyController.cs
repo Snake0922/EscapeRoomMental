@@ -27,7 +27,10 @@ public class AnsietyController : MonoBehaviour
         yield return segundos;
         ansietyValue += ansietyIncrement;
         ansietySlider.value = ansietyValue;
-        StartCoroutine(AumentarAnsiedad());
+        if (ansietyValue <= 100)
+        {
+            StartCoroutine(AumentarAnsiedad());
+        }
     }
     public void AnsietyLevel(int value)
     {
