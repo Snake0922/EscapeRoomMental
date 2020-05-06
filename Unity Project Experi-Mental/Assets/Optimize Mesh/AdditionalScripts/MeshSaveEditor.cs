@@ -4,7 +4,6 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
-#if UNITY_EDITOR
 public static class MeshSaverEditor
 {
 
@@ -41,4 +40,3 @@ public static class MeshSaverEditor
     }
 
 }
-#endif

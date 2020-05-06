@@ -12,7 +12,6 @@ TagManager:
   - "TangramPeque\xF1o2"
   - TangramTrianguloMediano
   - Null
-  - Llave
   layers:
   - Default
   - TransparentFX
@@ -26,7 +25,7 @@ TagManager:
   - Seleccionable
   - B emergencia
   - UI2
-  - UI TOP
+  - 
   - 
   - 
   - 
