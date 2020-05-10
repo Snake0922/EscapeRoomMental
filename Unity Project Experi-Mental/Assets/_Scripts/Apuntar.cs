@@ -18,6 +18,7 @@ public class Apuntar : MonoBehaviour
     public CharacterController cControler;
     public float velocidad = 1;
     private Vector3 move;
+    public int currentPuzzle = 0;
     private void Awake()
     {
         anim = Point.GetComponent<Animator>();
@@ -41,11 +42,13 @@ public class Apuntar : MonoBehaviour
                     {
                         objMirando.GetComponent<Outline>().enabled = false;
                     }
+                    if (currentPuzzle == 2)
+                    {
+                        objMirando.GetComponent<ActivarAccion>().OnTriggerExit.Invoke();
+                    }
                 }
-                /*if (objMirando != null)
-                {
-                    objMirando.GetComponent<ActivarAccion>().OnTriggerExit.Invoke();
-                }*/
+               
+                
 
                 objMirando = hit.collider.gameObject;
 

@@ -11,6 +11,7 @@ public class EngranajeController : MonoBehaviour
     public MeshRenderer boton;
     public Material amarillo, azul;
     public GameObject previousGear, nextGear;
+    public AnsietyController ansietyController;
     
     private void Start()
     {
@@ -28,6 +29,14 @@ public class EngranajeController : MonoBehaviour
             {
                 puzzleEngranajesController.combinacionesActuales[identificador] = 1;
                 boton.material = amarillo;
+                if(puzzleEngranajesController.combinacionesActuales[identificador]==puzzleEngranajesController.combinacionesCorrectas[identificador])
+                {
+                    ansietyController.AnsietyLevel(-5);
+                }
+                else
+                {
+                    ansietyController.AnsietyLevel(5);
+                }
             }
                 
         }
@@ -37,6 +46,14 @@ public class EngranajeController : MonoBehaviour
             {
                 puzzleEngranajesController.combinacionesActuales[identificador] = -1;
                 boton.material = azul;
+                if (puzzleEngranajesController.combinacionesActuales[identificador] == puzzleEngranajesController.combinacionesCorrectas[identificador])
+                {
+                    ansietyController.AnsietyLevel(-5);
+                }
+                else
+                {
+                    ansietyController.AnsietyLevel(5);
+                }
             }
         }
         if (Input.GetKeyDown(KeyCode.N))
