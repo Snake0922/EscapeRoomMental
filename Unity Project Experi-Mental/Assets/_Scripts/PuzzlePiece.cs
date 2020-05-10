@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PuzzlePiece : MonoBehaviour
 {
+    public SoundManager Smanager;
     public PasoPuzzles pPuzzle;
     [Space]
     public Transform point;
@@ -87,6 +88,8 @@ public class PuzzlePiece : MonoBehaviour
                             StartCoroutine(FinishTangram());
                         }
                         this.enabled = false;
+                        //Debug.Log("Si entra ( ͡° ͜ʖ ͡°)");
+                        Smanager.TangramEncaja();
                     }
                     else
                     {
@@ -129,6 +132,8 @@ public class PuzzlePiece : MonoBehaviour
         piece.transform.position = startPos;
         piece.transform.rotation = Quaternion.Euler(startRot);
         press = false;
+        Debug.Log("No encaja");
+        Smanager.TangramNoEncaja();
     }
     private void OnCollisionExit(Collision collision)
     {

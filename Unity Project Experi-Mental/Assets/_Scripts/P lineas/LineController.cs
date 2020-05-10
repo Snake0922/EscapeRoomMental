@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class LineController : MonoBehaviour
 {
+    public SoundManager sManager;
     public PasoPuzzles pPuzzle;
     [Space]
     public LineRenderer[] lRender;
@@ -126,7 +127,8 @@ public class LineController : MonoBehaviour
                 pointerFlip.localPosition = pos;
             }
             Finalizo = true;
-            Debug.Log("Finalizo");
+            sManager.LineasDeslizar(false);
+            //Debug.Log("Finalizo");
             pPuzzle.TerminadoLineas();
             return true;
         }
@@ -228,6 +230,8 @@ public class LineController : MonoBehaviour
                     lRender[i].SetPosition(posicionesCount - 1, _pos);
                     pointerFlip.localPosition = _pos;
                 }
+                sManager.LineasDeslizar(true);
+                //Debug.Log("szs");
             }
         }
     }

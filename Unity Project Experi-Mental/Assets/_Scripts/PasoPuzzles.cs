@@ -24,15 +24,12 @@ public class PasoPuzzles : MonoBehaviour
 
     [Header("Engranajes")]
     public GameObject Engra_obj;
-    public Transform posLlaves1;
     public GameObject outlineLlave1;
     [Header("Tangram")]
     public GameObject Tan_obj;
-    public Transform posLlaves2;
     public GameObject outlineLlave2;
     [Header("Lineas")]
     public GameObject Lin_obj;
-    public Transform posLlaves3;
     public GameObject outlineLlave3;
 
     private void Awake()
@@ -100,7 +97,7 @@ public class PasoPuzzles : MonoBehaviour
     public void TerminadoTangram()
     {
         Llaves.SetActive(true);
-        Llaves.transform.position = posLlaves2.position;
+        Llaves.transform.position = outlineLlave2.transform.position;
         Tan_obj.SetActive(false);
         //barraEstres.value = Mathf.Clamp(barraEstres.value - bajadaXpuzzle, 0, 100);
         //ansiController.ansietyValue -= bajadaXpuzzle;
@@ -115,7 +112,7 @@ public class PasoPuzzles : MonoBehaviour
     public void TerminadoLineas()
     {
         Llaves.SetActive(true);
-        Llaves.transform.position = posLlaves3.position;
+        Llaves.transform.position = outlineLlave3.transform.position;
         Lin_obj.SetActive(false);
         //barraEstres.value = Mathf.Clamp(barraEstres.value - bajadaXpuzzle, 0, 100);
         //ansiController.ansietyValue -= bajadaXpuzzle;
@@ -130,6 +127,6 @@ public class PasoPuzzles : MonoBehaviour
     public void TerminadoEngranajes()
     {
         Llaves.SetActive(true);
-        Llaves.transform.position = posLlaves1.position;
+        Llaves.transform.position = outlineLlave1.transform.position;
     }
 }
