@@ -47,7 +47,7 @@ public class PuzzlePiece : MonoBehaviour
         {
             press = false;
             rotateController.currentDraggingPiece = null;
-            ansietyController.AnsietyLevel(5);
+            //ansietyController.AnsietyLevel(5);
         }
     }
     private void Update()
@@ -86,10 +86,10 @@ public class PuzzlePiece : MonoBehaviour
                         {
                             ansietyController.AnsietyLevel(-10);
                             StartCoroutine(FinishTangram());
-                        }
-                        this.enabled = false;
+                        } 
                         //Debug.Log("Si entra ( ͡° ͜ʖ ͡°)");
                         Smanager.TangramEncaja();
+                        this.enabled = false;
                     }
                     else
                     {
@@ -101,13 +101,14 @@ public class PuzzlePiece : MonoBehaviour
             }   
         }
     }
+    IEnumerator Wait(float seconds)
+    {
+        yield return new WaitForSeconds(seconds);
+    }
     IEnumerator FinishTangram()
     {
-        Debug.Log("Puzzle terminado");
+        yield return new WaitForSeconds(1.5f);
         pPuzzle.TerminadoTangram();
-        yield return new WaitForSeconds(2.5f);
-        Debug.Log("Realizando animacion");
-        yield return null;
     }
     private void OnTriggerEnter(Collider other)
     {
