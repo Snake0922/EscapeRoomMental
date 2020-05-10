@@ -9,6 +9,7 @@ public class PuzzleEngranajesController : MonoBehaviour
     public bool checking = false;
     public static PuzzleEngranajesController instance;
     public GameObject GearWhite, GearBlue, GearRed;
+    public GameObject[] arrows;
     public Vector3[] posicionesEngranajesCorrectas = new Vector3[3];
     private void Awake()
     {
@@ -27,8 +28,13 @@ public class PuzzleEngranajesController : MonoBehaviour
         posicionesEngranajesCorrectas[0] = GearWhite.transform.position;
         posicionesEngranajesCorrectas[1] = GearBlue.transform.position;
         posicionesEngranajesCorrectas[2] = GearRed.transform.position;
+        
     }
 
+    IEnumerator Wait(float time)
+    {
+        yield return new WaitForSeconds(time);
+    }
     public void CheckPuzzle()
     {
         checking = true;
@@ -42,15 +48,28 @@ public class PuzzleEngranajesController : MonoBehaviour
             GearWhite.transform.position == posicionesEngranajesCorrectas[2])
             {
                 Debug.Log("puzzle correcto");
+                foreach(GameObject flechas in arrows)
+                {
+                    flechas.SetActive(false);
+                }
             }
             else
             {
+
                 Debug.Log("Puzzle incorrecto");
+                foreach (GameObject flechas in arrows)
+                {
+                    flechas.SetActive(false);
+                }
             }
         }
         else
         {
-            Debug.Log("Puzzle incorrecto");
+            Debug.Log("Rotaciones incorrectas");
+            foreach (GameObject flechas in arrows)
+            {
+                flechas.SetActive(false);
+            }
         }
     }
 }

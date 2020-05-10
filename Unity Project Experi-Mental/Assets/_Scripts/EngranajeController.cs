@@ -7,11 +7,13 @@ public class EngranajeController : MonoBehaviour
     public int identificador; //cada engranaje debe tener este script y un identificador diferente de acuerdo cada identificador correspondiente al index del array del engranaje
     public bool Ready = false;
     private PuzzleEngranajesController puzzleEngranajesController;
-    public float speed;
-    public MeshRenderer boton;
-    public Material amarillo, azul;
-    public GameObject previousGear, nextGear;
     public AnsietyController ansietyController;
+    public GameObject previousGear, nextGear;
+    public float speed;
+    [Header("Arrow")]
+    public GameObject FlechaSentidoReloj;
+    public GameObject FlechaSentidoContraReloj;
+   
     
     private void Start()
     {
@@ -23,12 +25,17 @@ public class EngranajeController : MonoBehaviour
         {
             transform.RotateAround(transform.position, Vector3.right, (speed* puzzleEngranajesController.combinacionesActuales[identificador]) * Time.deltaTime);
         }
+        else
+        {
+
+        }
         if (Input.GetKeyDown(KeyCode.E))
         {
             if(Ready)
             {
                 puzzleEngranajesController.combinacionesActuales[identificador] = 1;
-                boton.material = amarillo;
+                FlechaSentidoReloj.SetActive(true);
+                FlechaSentidoContraReloj.SetActive(false);
                 if(puzzleEngranajesController.combinacionesActuales[identificador]==puzzleEngranajesController.combinacionesCorrectas[identificador])
                 {
                     ansietyController.AnsietyLevel(-5);
@@ -45,7 +52,8 @@ public class EngranajeController : MonoBehaviour
             if(Ready)
             {
                 puzzleEngranajesController.combinacionesActuales[identificador] = -1;
-                boton.material = azul;
+                FlechaSentidoReloj.SetActive(false);
+                FlechaSentidoContraReloj.SetActive(true);
                 if (puzzleEngranajesController.combinacionesActuales[identificador] == puzzleEngranajesController.combinacionesCorrectas[identificador])
                 {
                     ansietyController.AnsietyLevel(-5);
