@@ -1,0 +1,60 @@
+							
+								SONIDOS REQUERIDOS
+
+INTRODUCCIÓN
+
+
+
+
+GAMEPLAY
+
+	En todo el juego
+
+- gameplay.wav (en loop durante todo el juego, música de fondo)
+	
+	Para la ansiedad
+
+Son 4 niveles de ansiedad, se pueden ver en el aumento o disminución de la barra de ansiedad.
+En cada nivel de ansiedad habrá un ritmo de respiración.
+
+- respiracion1.wav (respiración para el primer nivel de ansiedad, en loop hasta el siguiente nivel de ansiedad)
+- respiracion2.wav (respiración para el segundo nivel de ansiedad, en loop hasta el siguiente nivel de ansiedad)
+- respiracion3.wav (respiración para el tercer nivel de ansiedad, en loop hasta el siguiente nivel de ansiedad)
+- respiracion4.wav (respiración para el cuarto nivel de ansiedad, en loop hasta el siguiente nivel de ansiedad)
+
+Por cada dos ritmos de respiración habrá un latido diferente, uno leve y otro intenso.
+
+- corazon1.wav (latido para los dos primeros niveles de ansiedad, en loop hasta el siguiente nivel)
+- corazon2.wav (latido para los dos últimos niveles de ansiedad, en loop hasta regresar al nivel anterior)
+
+A partir del tercer nivel de ansiedad (los dos últimos niveles) entrará un sonido de reloj para intensificar el nivel de ansiedad.
+
+- reloj.wav 
+
+	Puzzle 1 - Tangram
+
+- tangram-deslizar.wav (cuando se selecciona una pieza y se arrastra para ubicarla en su lugar)
+- tangram-encaja.aiff (cuando la pieza seleccionada queda bien ubicada y toma el lugar que corresponde)
+- tangram-noencaja.flac (la pieza seleccionada se intenta ubicar en el lugar equivocado y no encaja)
+- tangram-abucheo.mp3 (murmullos para el estrés que sonarán durante la solución del puzzle)
+- tangram-llaves.wav (sonido que aparece al resolver el puzzle para indicarle al usuario que ha encontrado las llaves)
+
+	Puzzle 2 - Puzzle de líneas
+
+- linea-pasaporpunto.wav (cada que las lineas de los puzzles pasan por uno de los puntos en el camino)
+- linea-desplaza.aiff (sonido constante de las lineas mientras se desplazan por el tablero)
+- linea-sinera.wav (sonido que acompañará al juego de frio - caliente para guiar al usuario, si toma el camino correcto el ruido se vuelve lento, si toma el camino incorrecto se volverá más intenso)
+- linea-pasador.wav (sonido que aparece al resolver el puzzle para indicarle al usuario que ha quitado el pasador de cadena)
+
+	Puzzle 3 - Puzzle de engranajes
+
+- engranaje-gira.wav (sonido de los engranajes cada que giren)
+- engranaje-nogira.aiff (sonido de los engranajes al hacerlos girar en una dirección incorrecta, se frenan)
+- engranaje-puerta.wav (sonido que aparece al resolver el puzzle para indicarle al usuario que ha logrado abrir la puerta)
+
+
+
+FINAL
+
+
+
