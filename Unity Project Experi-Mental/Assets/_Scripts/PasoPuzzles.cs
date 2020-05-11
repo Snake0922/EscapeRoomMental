@@ -128,5 +128,6 @@ public class PasoPuzzles : MonoBehaviour
     {
         Llaves.SetActive(true);
         Llaves.transform.position = outlineLlave1.transform.position;
+        Engra_obj.SetActive(false);
     }
 }

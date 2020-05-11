@@ -30,12 +30,19 @@ public class SoundManager : MonoBehaviour
     public AudioClip tangram_agarrar;
     public AudioClip tangram_SiEncaja;
     public AudioClip tangram_NoEncaja;
+    public AudioClip tangramTerminado;
     [Header("lineas")]
     public AudioSource lineas;
     public AudioClip lineas_pasarXpunto;
     public AudioClip lineas_deslizando;
     private bool lineasDeslizePlay;
     public AudioClip lineas_pasador;
+    [Header("Engranajes")]
+    public AudioClip cambiarRotacion;
+    public AudioClip moverEngranaje;
+    public AudioClip RodandoEngranajes;
+    public AudioClip engranajeCorrecto;
+    public AudioClip engranajeIncorrecto;
 
     private void Update()
     {
@@ -99,6 +106,7 @@ public class SoundManager : MonoBehaviour
         lineas.PlayOneShot(lineas_pasarXpunto);
     }
 
+
     public void LineasDeslizar(bool on)
     {
         if (on)
@@ -115,5 +123,29 @@ public class SoundManager : MonoBehaviour
             lineas.Stop();
             lineas.PlayOneShot(lineas_pasador);
         }
+    }
+    public void CambiarRotacion()
+    {
+        effectos.PlayOneShot(cambiarRotacion);
+    }
+    public void MoverEngranaje()
+    {
+        effectos.PlayOneShot(moverEngranaje);
+    }
+    public void GirarEngranaje()
+    {
+        effectos.PlayOneShot(RodandoEngranajes);
+    }
+    public void EngranajeCorrecto()
+    {
+        effectos.PlayOneShot(engranajeCorrecto);
+    }
+    public void EngranajeIncorrecto()
+    {
+        effectos.PlayOneShot(engranajeIncorrecto);
+    }
+    public void TangramTerminado()
+    {
+        effectos.PlayOneShot(tangramTerminado);
     }
 }

@@ -13,6 +13,10 @@ TagManager:
   - TangramTrianguloMediano
   - Null
   - Llave
+  - TangramRombo
+  - GearRed
+  - GearBlue
+  - GearGray
   layers:
   - Default
   - TransparentFX

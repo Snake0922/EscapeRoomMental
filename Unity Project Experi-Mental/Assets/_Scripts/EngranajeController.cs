@@ -10,25 +10,38 @@ public class EngranajeController : MonoBehaviour
     public AnsietyController ansietyController;
     public GameObject previousGear, nextGear;
     public float speed;
+    public Vector3 initialRotation;
+    public string nameTagCorrectPosition;
+    public SoundManager sManager;
+    public Light myLight;
     [Header("Arrow")]
     public GameObject FlechaSentidoReloj;
     public GameObject FlechaSentidoContraReloj;
-   
     
+    [Header("PieceMovement")]
+    public float lerpTime = 1.5f;
+    public float currentLerpTime = 0;
+    public bool keyHit = false;
+
     private void Start()
     {
         puzzleEngranajesController = GetComponentInParent<PuzzleEngranajesController>();
+        initialRotation = transform.rotation.eulerAngles;
+        myLight = GetComponentInChildren<Light>();
+    }
+
+    public void ResetGearPositions()
+    {
+        transform.eulerAngles = initialRotation;
     }
     private void Update()
     {
         if(puzzleEngranajesController.checking)
         {
             transform.RotateAround(transform.position, Vector3.right, (speed* puzzleEngranajesController.combinacionesActuales[identificador]) * Time.deltaTime);
+            //sManager.GirarEngranaje();
         }
-        else
-        {
-
-        }
+        
         if (Input.GetKeyDown(KeyCode.E))
         {
             if(Ready)
@@ -36,13 +49,16 @@ public class EngranajeController : MonoBehaviour
                 puzzleEngranajesController.combinacionesActuales[identificador] = 1;
                 FlechaSentidoReloj.SetActive(true);
                 FlechaSentidoContraReloj.SetActive(false);
+                //sManager.CambiarRotacion();
                 if(puzzleEngranajesController.combinacionesActuales[identificador]==puzzleEngranajesController.combinacionesCorrectas[identificador])
                 {
                     ansietyController.AnsietyLevel(-5);
+                    AumentarLuz();
                 }
                 else
                 {
                     ansietyController.AnsietyLevel(5);
+                    DisminuirLuz();
                 }
             }
                 
@@ -54,13 +70,16 @@ public class EngranajeController : MonoBehaviour
                 puzzleEngranajesController.combinacionesActuales[identificador] = -1;
                 FlechaSentidoReloj.SetActive(false);
                 FlechaSentidoContraReloj.SetActive(true);
+                //sManager.CambiarRotacion();
                 if (puzzleEngranajesController.combinacionesActuales[identificador] == puzzleEngranajesController.combinacionesCorrectas[identificador])
                 {
                     ansietyController.AnsietyLevel(-5);
+                    AumentarLuz();
                 }
                 else
                 {
                     ansietyController.AnsietyLevel(5);
+                    DisminuirLuz();
                 }
             }
         }
@@ -69,8 +88,10 @@ public class EngranajeController : MonoBehaviour
             if (Ready && previousGear!=null)
             {
                 Vector3 currentPositionBeforeToChange = transform.position;
-                transform.position = previousGear.transform.position;
-                previousGear.transform.position = currentPositionBeforeToChange;
+                //sManager.MoverEngranaje();
+                StartCoroutine(slide(transform, previousGear.transform.position));
+                StartCoroutine(slide(previousGear.transform, currentPositionBeforeToChange));
+
             }
 
         }
@@ -79,9 +100,27 @@ public class EngranajeController : MonoBehaviour
             if (Ready && nextGear != null)
             {
                 Vector3 currentPositionBeforeToChange = transform.position;
-                transform.position = nextGear.transform.position;
-                nextGear.transform.position = currentPositionBeforeToChange;
+                //sManager.MoverEngranaje();
+                StartCoroutine(slide(transform, nextGear.transform.position));
+                StartCoroutine(slide(nextGear.transform, currentPositionBeforeToChange));
+
             }
+        }
+    }
+    private IEnumerator slide(Transform currentGear,Vector3 nextGear)
+    {
+        keyHit = true;
+        while (keyHit)
+        {
+            currentLerpTime += Time.deltaTime;
+            if (currentLerpTime >= lerpTime)
+            {
+                keyHit = false;
+                currentLerpTime = 0;
+            }
+            float Perc = currentLerpTime / lerpTime;
+            currentGear.position = Vector3.Lerp(currentGear.transform.position, nextGear, Perc);
+            yield return null;
         }
     }
     public void EnableBool()
@@ -92,5 +131,52 @@ public class EngranajeController : MonoBehaviour
     {
         Ready = false;
     }
-    
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag(nameTagCorrectPosition))
+        {
+            puzzleEngranajesController.currentPositionData[identificador] = 1;
+            AumentarLuz();
+        }
+
+    }
+    public void AumentarLuz()
+    {
+        if (myLight.intensity == 0)
+        {
+            myLight.intensity = 1;
+        }
+        else if (myLight.intensity == 1)
+        {
+            myLight.intensity = 2;
+        }
+        else
+        {
+            return;
+        }
+    }
+    public void DisminuirLuz()
+    {
+        if (myLight.intensity == 0)
+        {
+            return;
+        }
+        else if (myLight.intensity == 1)
+        {
+            myLight.intensity = 0;
+        }
+        else
+        {
+            myLight.intensity = 1;
+        }
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.CompareTag(nameTagCorrectPosition))
+        {
+            puzzleEngranajesController.currentPositionData[identificador] = -1;
+            DisminuirLuz();
+        }
+    }
 }

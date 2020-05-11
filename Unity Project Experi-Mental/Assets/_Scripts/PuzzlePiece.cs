@@ -21,12 +21,6 @@ public class PuzzlePiece : MonoBehaviour
     public Transform myParent;
     public RotateController rotateController;
 
-    [Header("Clamp Position")]
-    public float minX;
-    public float maxX;
-    public float minY;
-    public float maxY;
-
     [Header("Ansiety")]
     public AnsietyController ansietyController;
     private void Start()
@@ -80,6 +74,7 @@ public class PuzzlePiece : MonoBehaviour
                             piecesCompleted++;
                             //Debug.Log(piecesCompleted);
                             ansietyController.AnsietyLevel(-10);
+                            Smanager.TangramEncaja();
                             this.enabled = false;
                         }
                         else
@@ -88,7 +83,7 @@ public class PuzzlePiece : MonoBehaviour
                             StartCoroutine(FinishTangram());
                         } 
                         //Debug.Log("Si entra ( ͡° ͜ʖ ͡°)");
-                        Smanager.TangramEncaja();
+                        
                         this.enabled = false;
                     }
                     else
@@ -96,6 +91,7 @@ public class PuzzlePiece : MonoBehaviour
                         piece.transform.position = startPos;
                         ansietyController.AnsietyLevel(5);
                         piece.transform.rotation = Quaternion.Euler(startRot);
+                        Smanager.TangramNoEncaja();
                     }
                 }
             }   
@@ -107,6 +103,7 @@ public class PuzzlePiece : MonoBehaviour
     }
     IEnumerator FinishTangram()
     {
+        //Smanager.TangramTerminado();
         yield return new WaitForSeconds(1.5f);
         pPuzzle.TerminadoTangram();
     }
