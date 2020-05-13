@@ -21,8 +21,6 @@ public class PuzzlePiece : MonoBehaviour
     public Transform myParent;
     public RotateController rotateController;
 
-    [Header("Ansiety")]
-    public AnsietyController ansietyController;
     private void Start()
     {
         startPos = piece.transform.position;
@@ -73,13 +71,11 @@ public class PuzzlePiece : MonoBehaviour
                         {
                             piecesCompleted++;
                             //Debug.Log(piecesCompleted);
-                            ansietyController.AnsietyLevel(-10);
                             Smanager.TangramEncaja();
                             this.enabled = false;
                         }
                         else
                         {
-                            ansietyController.AnsietyLevel(-10);
                             StartCoroutine(FinishTangram());
                         } 
                         //Debug.Log("Si entra ( ͡° ͜ʖ ͡°)");
@@ -89,7 +85,6 @@ public class PuzzlePiece : MonoBehaviour
                     else
                     {
                         piece.transform.position = startPos;
-                        ansietyController.AnsietyLevel(5);
                         piece.transform.rotation = Quaternion.Euler(startRot);
                         Smanager.TangramNoEncaja();
                     }

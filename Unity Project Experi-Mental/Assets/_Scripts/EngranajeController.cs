@@ -7,7 +7,6 @@ public class EngranajeController : MonoBehaviour
     public int identificador; //cada engranaje debe tener este script y un identificador diferente de acuerdo cada identificador correspondiente al index del array del engranaje
     public bool Ready = false;
     private PuzzleEngranajesController puzzleEngranajesController;
-    public AnsietyController ansietyController;
     public GameObject previousGear, nextGear;
     public float speed;
     public Vector3 initialRotation;
@@ -52,12 +51,10 @@ public class EngranajeController : MonoBehaviour
                 //sManager.CambiarRotacion();
                 if(puzzleEngranajesController.combinacionesActuales[identificador]==puzzleEngranajesController.combinacionesCorrectas[identificador])
                 {
-                    ansietyController.AnsietyLevel(-5);
                     AumentarLuz();
                 }
                 else
                 {
-                    ansietyController.AnsietyLevel(5);
                     DisminuirLuz();
                 }
             }
@@ -73,12 +70,10 @@ public class EngranajeController : MonoBehaviour
                 //sManager.CambiarRotacion();
                 if (puzzleEngranajesController.combinacionesActuales[identificador] == puzzleEngranajesController.combinacionesCorrectas[identificador])
                 {
-                    ansietyController.AnsietyLevel(-5);
                     AumentarLuz();
                 }
                 else
                 {
-                    ansietyController.AnsietyLevel(5);
                     DisminuirLuz();
                 }
             }
