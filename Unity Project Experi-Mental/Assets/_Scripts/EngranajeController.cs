@@ -86,7 +86,6 @@ public class EngranajeController : MonoBehaviour
                 //sManager.MoverEngranaje();
                 StartCoroutine(slide(transform, previousGear.transform.position));
                 StartCoroutine(slide(previousGear.transform, currentPositionBeforeToChange));
-
             }
 
         }
@@ -98,7 +97,6 @@ public class EngranajeController : MonoBehaviour
                 //sManager.MoverEngranaje();
                 StartCoroutine(slide(transform, nextGear.transform.position));
                 StartCoroutine(slide(nextGear.transform, currentPositionBeforeToChange));
-
             }
         }
     }
@@ -138,6 +136,7 @@ public class EngranajeController : MonoBehaviour
     }
     public void AumentarLuz()
     {
+        sManager.MoverEngranaje();
         if (myLight.intensity == 0)
         {
             myLight.intensity = 1;
@@ -153,6 +152,7 @@ public class EngranajeController : MonoBehaviour
     }
     public void DisminuirLuz()
     {
+        sManager.MoverEngranaje();
         if (myLight.intensity == 0)
         {
             return;
