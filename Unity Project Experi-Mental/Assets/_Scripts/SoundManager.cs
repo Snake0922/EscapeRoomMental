@@ -38,9 +38,7 @@ public class SoundManager : MonoBehaviour
     private bool lineasDeslizePlay;
     public AudioClip lineas_pasador;
     [Header("Engranajes")]
-    public AudioClip cambiarRotacion;
     public AudioClip moverEngranaje;
-    public AudioClip RodandoEngranajes;
     public AudioClip engranajeCorrecto;
     public AudioClip engranajeIncorrecto;
 
@@ -124,17 +122,10 @@ public class SoundManager : MonoBehaviour
             lineas.PlayOneShot(lineas_pasador);
         }
     }
-    public void CambiarRotacion()
-    {
-        effectos.PlayOneShot(cambiarRotacion);
-    }
+
     public void MoverEngranaje()
     {
         effectos.PlayOneShot(moverEngranaje);
-    }
-    public void GirarEngranaje()
-    {
-        effectos.PlayOneShot(RodandoEngranajes);
     }
     public void EngranajeCorrecto()
     {

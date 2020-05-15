@@ -72,21 +72,21 @@ public class PuzzleEngranajesController : MonoBehaviour
             if(currentPositionData[0]==1 && currentPositionData[1] == 1 && currentPositionData[2] == 1)
             {
                 Debug.Log("puzzle correcto");
-                //sManager.EngranajeCorrecto();
+                sManager.EngranajeCorrecto();
                 StartCoroutine(Wait(2.5f));
                 pasoPuzzles.TerminadoEngranajes();
             }
             else
             {
                 Debug.Log("Puzzle incorrecto");
-                //sManager.EngranajeIncorrecto();
+                sManager.EngranajeIncorrecto();
                 StartCoroutine(Wait(2.5f));
             }
         }
         else
         {
             Debug.Log("Rotaciones incorrectas");
-            //sManager.EngranajeIncorrecto();
+            sManager.EngranajeIncorrecto();
             foreach (GameObject flechas in arrows)
             {
                 flechas.SetActive(false);
