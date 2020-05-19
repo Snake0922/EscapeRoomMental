@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 1c28d71ca1950ae40a4cb357ac6f6cbd
+guid: a5b6000f986e7574e8babab7ed86b73e
 ModelImporter:
   serializedVersion: 19300
   internalIDToNameTable: []
@@ -34,8 +34,8 @@ ModelImporter:
     isReadable: 0
   meshes:
     lODScreenPercentages: []
-    globalScale: 3.3
-    meshCompression: 1
+    globalScale: 70
+    meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
     sortHierarchyByName: 1
@@ -52,7 +52,7 @@ ModelImporter:
     skinWeightsMode: 0
     maxBonesPerVertex: 4
     minBoneWeight: 0.001
-    meshOptimizationFlags: 0
+    meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
@@ -60,13 +60,13 @@ ModelImporter:
     secondaryUVPackMargin: 4
     useFileScale: 1
   tangentSpace:
-    normalSmoothAngle: 33
+    normalSmoothAngle: 60
     normalImportMode: 0
     tangentImportMode: 3
-    normalCalculationMode: 0
+    normalCalculationMode: 4
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
-    normalSmoothingSource: 2
+    normalSmoothingSource: 0
   referencedClips: []
   importAnimation: 1
   humanDescription:
@@ -80,7 +80,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 3.3
+    globalScale: 0.7
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0

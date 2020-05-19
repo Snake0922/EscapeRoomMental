@@ -67,23 +67,21 @@ public class PuzzlePiece : MonoBehaviour
                         Destroy(checker.GetComponent<Outline2>());
                         Destroy(gameObject.GetComponent<Outline2>());
                         Destroy(checker);
-                        if (piecesCompleted < 5)
+                        if (piecesCompleted < 6)
                         {
-                            piecesCompleted++;
-                            //Debug.Log(piecesCompleted);
+                            piecesCompleted++;  
                             Smanager.TangramEncaja();
                             this.enabled = false;
                         }
                         else
                         {
                             StartCoroutine(FinishTangram());
-                        } 
-                        //Debug.Log("Si entra ( ͡° ͜ʖ ͡°)");
-                        
+                        }                         
                         this.enabled = false;
                     }
                     else
                     {
+                        Debug.Log(myParent.transform.rotation.eulerAngles.z);
                         piece.transform.position = startPos;
                         piece.transform.rotation = Quaternion.Euler(startRot);
                         Smanager.TangramNoEncaja();
@@ -98,7 +96,7 @@ public class PuzzlePiece : MonoBehaviour
     }
     IEnumerator FinishTangram()
     {
-        //Smanager.TangramTerminado();
+        Smanager.TangramTerminado();
         yield return new WaitForSeconds(1.5f);
         pPuzzle.TerminadoTangram();
     }
