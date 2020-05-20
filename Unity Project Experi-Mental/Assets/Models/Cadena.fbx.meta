@@ -1,0 +1,156 @@
+fileFormatVersion: 2
+guid: e174e37df662cd74289ea60eb9f51113
+ModelImporter:
+  serializedVersion: 19300
+  internalIDToNameTable:
+  - first:
+      74: 1078205234016036262
+    second: Handle|ANIM_handle|C4D Animation Take|Layer0
+  - first:
+      74: -2142191318250064928
+    second: Handle|Handle|C4D Animation Take|Layer0
+  - first:
+      74: 8237464705670635542
+    second: Handle|Pieces_1_2|C4D Animation Take|Layer0
+  - first:
+      74: -932980091411357548
+    second: Handle|Pieces_1|C4D Animation Take|Layer0
+  - first:
+      74: 7641139129828892238
+    second: Handle|Pieces_2_2|C4D Animation Take|Layer0
+  - first:
+      74: 3369842435825255761
+    second: Handle|Pieces_2|C4D Animation Take|Layer0
+  - first:
+      74: 5064978126656513436
+    second: Handle|Pieces_3_2|C4D Animation Take|Layer0
+  - first:
+      74: -1342004034940372680
+    second: Handle|Pieces_3|C4D Animation Take|Layer0
+  - first:
+      74: -8323411552841657649
+    second: Handle|Pieces_4|C4D Animation Take|Layer0
+  - first:
+      74: -5690527004559253856
+    second: Handle|Pieces_5|C4D Animation Take|Layer0
+  - first:
+      74: 8709314991794263980
+    second: Pieces_1|ANIM_handle|C4D Animation Take|Layer0
+  - first:
+      74: 1695035021348393948
+    second: Pieces_1|Handle|C4D Animation Take|Layer0
+  - first:
+      74: 8829795794896385428
+    second: Pieces_1|Pieces_1_2|C4D Animation Take|Layer0
+  - first:
+      74: 723452570802647908
+    second: Pieces_1|Pieces_1|C4D Animation Take|Layer0
+  - first:
+      74: 4153025810612777477
+    second: Pieces_1|Pieces_2_2|C4D Animation Take|Layer0
+  - first:
+      74: 5780928042943526140
+    second: Pieces_1|Pieces_2|C4D Animation Take|Layer0
+  - first:
+      74: -6869155659964991303
+    second: Pieces_1|Pieces_3_2|C4D Animation Take|Layer0
+  - first:
+      74: 2313314971901001040
+    second: Pieces_1|Pieces_3|C4D Animation Take|Layer0
+  - first:
+      74: -5365774817873941070
+    second: Pieces_1|Pieces_4|C4D Animation Take|Layer0
+  - first:
+      74: 8634055367424202277
+    second: Pieces_1|Pieces_5|C4D Animation Take|Layer0
+  externalObjects: {}
+  materials:
+    materialImportMode: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

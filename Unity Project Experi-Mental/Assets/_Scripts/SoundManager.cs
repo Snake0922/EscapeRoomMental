@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Audio;
 
 public class SoundManager : MonoBehaviour
 {
@@ -42,6 +43,10 @@ public class SoundManager : MonoBehaviour
     public AudioClip engranajeCorrecto;
     public AudioClip engranajeIncorrecto;
 
+    [Header("Voices")]
+    public AudioSource voices;
+    public AudioMixer Distortion;
+    public AudioMixerSnapshot Phase1, Phase2, Phase3, Phase4;
     private void Update()
     {
         if (!relojPlay && sAnsiedad.value >= 240)
@@ -138,5 +143,22 @@ public class SoundManager : MonoBehaviour
     public void TangramTerminado()
     {
         effectos.PlayOneShot(tangramTerminado);
+    }
+
+    public void DistortionFase1()
+    {
+        Phase1.TransitionTo(0.25f);
+    }
+    public void DistortionFase2()
+    {
+        Phase2.TransitionTo(0.25f);
+    }
+    public void DistortionFase3()
+    {
+        Phase3.TransitionTo(0.25f);
+    }
+    public void DistortionFase4()
+    {
+        Phase4.TransitionTo(0.25f);
     }
 }
