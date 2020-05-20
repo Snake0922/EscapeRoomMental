@@ -48,7 +48,7 @@ public class PuzzleEngranajesController : MonoBehaviour
         }
     }
 
-    IEnumerator Wait(float time)
+    IEnumerator Wait(float time, bool State)
     {
         foreach (GameObject flechas in arrows)
         {
@@ -60,6 +60,8 @@ public class PuzzleEngranajesController : MonoBehaviour
         GearRed.GetComponent<EngranajeController>().ResetGearPositions();
         checking = false;
         DefaultValues();
+        if(State==true)
+            pasoPuzzles.TerminadoEngranajes();
     }
     public void CheckPuzzle()
     {
@@ -73,14 +75,14 @@ public class PuzzleEngranajesController : MonoBehaviour
             {
                 Debug.Log("puzzle correcto");
                 sManager.EngranajeCorrecto();
-                StartCoroutine(Wait(2.5f));
-                pasoPuzzles.TerminadoEngranajes();
+                StartCoroutine(Wait(2.5f,true));
+                
             }
             else
             {
                 Debug.Log("Puzzle incorrecto");
                 sManager.EngranajeIncorrecto();
-                StartCoroutine(Wait(2.5f));
+                StartCoroutine(Wait(2.5f,false));
             }
         }
         else
@@ -91,7 +93,7 @@ public class PuzzleEngranajesController : MonoBehaviour
             {
                 flechas.SetActive(false);
             }
-            StartCoroutine(Wait(2.5f));
+            StartCoroutine(Wait(2.5f,false));
         }
     }
 }
