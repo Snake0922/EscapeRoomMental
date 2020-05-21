@@ -137,13 +137,19 @@ public class EngranajeController : MonoBehaviour
     public void AumentarLuz()
     {
         sManager.MoverEngranaje();
+        if (sManager.PhaseDistortion > 0)
+        {
+            sManager.PhaseDistortion--;
+        }
+        sManager._Distortion();
+        sManager.PlayVoices();
         if (myLight.intensity == 0)
         {
-            myLight.intensity = 1;
+            myLight.intensity = 0.75f;
         }
-        else if (myLight.intensity == 1)
+        else if (myLight.intensity == 0.75f)
         {
-            myLight.intensity = 2;
+            myLight.intensity = 1.5f;
         }
         else
         {
@@ -153,17 +159,24 @@ public class EngranajeController : MonoBehaviour
     public void DisminuirLuz()
     {
         sManager.MoverEngranaje();
+        if (sManager.PhaseDistortion < 4)
+        {
+            sManager.PhaseDistortion++;
+
+        }
+        sManager._Distortion();
+        sManager.PlayVoices();
         if (myLight.intensity == 0)
         {
             return;
         }
-        else if (myLight.intensity == 1)
+        else if (myLight.intensity == 0.75f)
         {
             myLight.intensity = 0;
         }
         else
         {
-            myLight.intensity = 1;
+            myLight.intensity = 0.75f;
         }
     }
     private void OnTriggerExit(Collider other)

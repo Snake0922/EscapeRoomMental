@@ -20,7 +20,6 @@ public class PuzzlePiece : MonoBehaviour
     public int alternativeAngleCorrect = 999, alternativeAngleCorrect2 = 999;
     public Transform myParent;
     public RotateController rotateController;
-
     private void Start()
     {
         startPos = piece.transform.position;
@@ -71,6 +70,12 @@ public class PuzzlePiece : MonoBehaviour
                         {
                             piecesCompleted++;  
                             Smanager.TangramEncaja();
+                            if (Smanager.PhaseDistortion > 0)
+                            {
+                                Smanager.PhaseDistortion--;  
+                            }
+                            Smanager._Distortion();
+                            Smanager.PlayVoices();
                             this.enabled = false;
                         }
                         else
@@ -85,6 +90,12 @@ public class PuzzlePiece : MonoBehaviour
                         piece.transform.position = startPos;
                         piece.transform.rotation = Quaternion.Euler(startRot);
                         Smanager.TangramNoEncaja();
+                        if (Smanager.PhaseDistortion < 4)
+                        {
+                            Smanager.PhaseDistortion++;   
+                        }
+                        Smanager._Distortion();
+                        Smanager.PlayVoices();
                     }
                 }
             }   
@@ -123,7 +134,6 @@ public class PuzzlePiece : MonoBehaviour
         piece.transform.position = startPos;
         piece.transform.rotation = Quaternion.Euler(startRot);
         press = false;
-        Debug.Log("No encaja");
         Smanager.TangramNoEncaja();
     }
     private void OnCollisionExit(Collision collision)

@@ -1268,7 +1268,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 0.375, g: 0.50000006, b: 0.75, a: 1}
   m_RaycastTarget: 0
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -1427,7 +1426,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 0
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -2136,7 +2134,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 0.375, g: 0.50000006, b: 0.75, a: 1}
   m_RaycastTarget: 0
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -2210,7 +2207,6 @@ MonoBehaviour:
   m_Material: {fileID: 2100000, guid: 55029faa3d5e4944692cb20920e824a0, type: 2}
   m_Color: {r: 0.14509805, g: 0.19215687, b: 0.50980395, a: 1}
   m_RaycastTarget: 0
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -2368,7 +2364,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 0
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -3159,7 +3154,6 @@ MonoBehaviour:
   m_Material: {fileID: 2100000, guid: 55029faa3d5e4944692cb20920e824a0, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 0
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -3233,7 +3227,6 @@ MonoBehaviour:
   m_Material: {fileID: 2100000, guid: 55029faa3d5e4944692cb20920e824a0, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 0
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -3510,7 +3503,6 @@ MonoBehaviour:
   m_Material: {fileID: 2100000, guid: 55029faa3d5e4944692cb20920e824a0, type: 2}
   m_Color: {r: 0.5, g: 0.14386791, b: 0.44738322, a: 1}
   m_RaycastTarget: 0
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -4031,6 +4023,7 @@ MonoBehaviour:
   alternativeAngleCorrect2: -179
   myParent: {fileID: 0}
   rotateController: {fileID: 0}
+  PhaseDistortion: 0
 --- !u!114 &154652559
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4597,7 +4590,6 @@ MonoBehaviour:
   m_Material: {fileID: 2100000, guid: 55029faa3d5e4944692cb20920e824a0, type: 2}
   m_Color: {r: 0.14658241, g: 0.19110566, b: 0.509434, a: 1}
   m_RaycastTarget: 0
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -4812,6 +4804,7 @@ MonoBehaviour:
   alternativeAngleCorrect2: 270
   myParent: {fileID: 0}
   rotateController: {fileID: 0}
+  PhaseDistortion: 0
 --- !u!114 &193868644
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5303,7 +5296,6 @@ MonoBehaviour:
   m_Material: {fileID: 2100000, guid: 55029faa3d5e4944692cb20920e824a0, type: 2}
   m_Color: {r: 0.14509805, g: 0.19215687, b: 0.50980395, a: 1}
   m_RaycastTarget: 0
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -5377,7 +5369,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 0.375, g: 0.50000006, b: 0.75, a: 1}
   m_RaycastTarget: 0
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -5823,7 +5814,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 0.375, g: 0.50000006, b: 0.75, a: 1}
   m_RaycastTarget: 0
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -6336,7 +6326,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 0
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -6461,7 +6450,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 0
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -7009,6 +6997,7 @@ MonoBehaviour:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}
   sManager: {fileID: 1154414528}
+  PhaseDistortion: 0
 --- !u!65 &303832332
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7525,7 +7514,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 0
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -7806,7 +7794,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 0.89178467, g: 0, b: 1, a: 1}
   m_RaycastTarget: 0
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -8310,7 +8297,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 0
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -8520,7 +8506,6 @@ MonoBehaviour:
   m_Material: {fileID: 2100000, guid: 55029faa3d5e4944692cb20920e824a0, type: 2}
   m_Color: {r: 0.6020826, g: 0.60381645, b: 0.6226415, a: 1}
   m_RaycastTarget: 0
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -8748,7 +8733,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 0
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -9346,7 +9330,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 0
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -9471,7 +9454,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 0.375, g: 0.50000006, b: 0.75, a: 1}
   m_RaycastTarget: 0
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -9658,7 +9640,6 @@ MonoBehaviour:
   m_Material: {fileID: 2100000, guid: 55029faa3d5e4944692cb20920e824a0, type: 2}
   m_Color: {r: 0.5, g: 0.14386791, b: 0.44738322, a: 1}
   m_RaycastTarget: 0
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -10104,7 +10085,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 0
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -10350,7 +10330,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 0
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -10928,7 +10907,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 0
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -11148,7 +11126,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 0
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -11586,7 +11563,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 0.89178467, g: 0, b: 1, a: 1}
   m_RaycastTarget: 0
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -11770,10 +11746,11 @@ MonoBehaviour:
   _collision: 0
   checker: {fileID: 0}
   nameTag: TangramTrianguloGrande1
-  alternativeAngleCorrect: 134
-  alternativeAngleCorrect2: 135
+  alternativeAngleCorrect: 99
+  alternativeAngleCorrect2: 99
   myParent: {fileID: 0}
   rotateController: {fileID: 0}
+  PhaseDistortion: 0
 --- !u!114 &560286060
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15184,7 +15161,6 @@ MonoBehaviour:
   m_Material: {fileID: 2100000, guid: 55029faa3d5e4944692cb20920e824a0, type: 2}
   m_Color: {r: 0.5, g: 0.14386791, b: 0.44738322, a: 1}
   m_RaycastTarget: 0
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -15333,7 +15309,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 0.375, g: 0.50000006, b: 0.75, a: 1}
   m_RaycastTarget: 0
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -15562,7 +15537,6 @@ MonoBehaviour:
   m_Material: {fileID: 2100000, guid: 55029faa3d5e4944692cb20920e824a0, type: 2}
   m_Color: {r: 0.5, g: 0.14386791, b: 0.44738322, a: 1}
   m_RaycastTarget: 0
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -16713,7 +16687,6 @@ MonoBehaviour:
   m_Material: {fileID: 2100000, guid: 55029faa3d5e4944692cb20920e824a0, type: 2}
   m_Color: {r: 0.14658241, g: 0.19110566, b: 0.509434, a: 1}
   m_RaycastTarget: 0
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -16849,7 +16822,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 0
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -17036,7 +17008,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 0
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -17133,7 +17104,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 684033465}
-  m_LocalRotation: {x: -0.021473907, y: 0.17043842, z: -0.12314565, w: 0.97740716}
+  m_LocalRotation: {x: -0.021473918, y: 0.17043851, z: -0.12314565, w: 0.97740716}
   m_LocalPosition: {x: 4.704, y: 0.92, z: -1.492}
   m_LocalScale: {x: 0.099999994, y: 0.09999999, z: 0.099999994}
   m_Children:
@@ -17559,7 +17530,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 0.375, g: 0.50000006, b: 0.75, a: 1}
   m_RaycastTarget: 0
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -18005,7 +17975,6 @@ MonoBehaviour:
   m_Material: {fileID: 2100000, guid: 55029faa3d5e4944692cb20920e824a0, type: 2}
   m_Color: {r: 0.5, g: 0.14386791, b: 0.44738322, a: 1}
   m_RaycastTarget: 0
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -18255,6 +18224,7 @@ MonoBehaviour:
   alternativeAngleCorrect2: 999
   myParent: {fileID: 0}
   rotateController: {fileID: 0}
+  PhaseDistortion: 0
 --- !u!114 &766763495
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18750,7 +18720,6 @@ MonoBehaviour:
   m_Material: {fileID: 2100000, guid: 55029faa3d5e4944692cb20920e824a0, type: 2}
   m_Color: {r: 0.5, g: 0.14386791, b: 0.44738322, a: 1}
   m_RaycastTarget: 0
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -19346,7 +19315,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_RaycastTarget: 0
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -19676,7 +19644,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 0.375, g: 0.50000006, b: 0.75, a: 1}
   m_RaycastTarget: 0
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -19750,7 +19717,6 @@ MonoBehaviour:
   m_Material: {fileID: 2100000, guid: 55029faa3d5e4944692cb20920e824a0, type: 2}
   m_Color: {r: 0.14509805, g: 0.19215687, b: 0.50980395, a: 1}
   m_RaycastTarget: 0
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -20593,7 +20559,6 @@ MonoBehaviour:
   m_Material: {fileID: 2100000, guid: 55029faa3d5e4944692cb20920e824a0, type: 2}
   m_Color: {r: 0.5, g: 0.14386791, b: 0.44738322, a: 1}
   m_RaycastTarget: 0
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -20746,7 +20711,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 0.375, g: 0.50000006, b: 0.75, a: 1}
   m_RaycastTarget: 0
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -21045,7 +21009,6 @@ MonoBehaviour:
   m_Material: {fileID: 2100000, guid: 55029faa3d5e4944692cb20920e824a0, type: 2}
   m_Color: {r: 0.5, g: 0.14386791, b: 0.44738322, a: 1}
   m_RaycastTarget: 0
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -21151,7 +21114,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 0
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -21401,7 +21363,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 0
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -21610,7 +21571,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 0
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -22051,7 +22011,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 0
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -22228,7 +22187,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 0
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -22872,7 +22830,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 0
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -23257,7 +23214,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 0.375, g: 0.50000006, b: 0.75, a: 1}
   m_RaycastTarget: 0
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -23331,7 +23287,6 @@ MonoBehaviour:
   m_Material: {fileID: 2100000, guid: 55029faa3d5e4944692cb20920e824a0, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 0
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -23405,7 +23360,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 0.375, g: 0.50000006, b: 0.75, a: 1}
   m_RaycastTarget: 0
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -23511,7 +23465,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 0
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -23750,7 +23703,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 0
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -24436,7 +24388,6 @@ MonoBehaviour:
   m_Material: {fileID: 2100000, guid: 55029faa3d5e4944692cb20920e824a0, type: 2}
   m_Color: {r: 0.5, g: 0.14386791, b: 0.44738322, a: 1}
   m_RaycastTarget: 0
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -24741,7 +24692,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 0
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -25001,7 +24951,6 @@ MonoBehaviour:
   m_Material: {fileID: 2100000, guid: 55029faa3d5e4944692cb20920e824a0, type: 2}
   m_Color: {r: 0.5, g: 0.14386791, b: 0.44738322, a: 1}
   m_RaycastTarget: 0
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -25354,7 +25303,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 0.375, g: 0.50000006, b: 0.75, a: 1}
   m_RaycastTarget: 0
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -25854,7 +25802,6 @@ MonoBehaviour:
   m_Material: {fileID: 2100000, guid: 55029faa3d5e4944692cb20920e824a0, type: 2}
   m_Color: {r: 0.14509805, g: 0.19215687, b: 0.50980395, a: 1}
   m_RaycastTarget: 0
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -25889,6 +25836,11 @@ GameObject:
   - component: {fileID: 1154414528}
   - component: {fileID: 1154414527}
   - component: {fileID: 1154414529}
+  - component: {fileID: 1154414532}
+  - component: {fileID: 1154414531}
+  - component: {fileID: 1154414530}
+  - component: {fileID: 1154414534}
+  - component: {fileID: 1154414533}
   m_Layer: 0
   m_Name: Control
   m_TagString: Untagged
@@ -26069,12 +26021,18 @@ MonoBehaviour:
   moverEngranaje: {fileID: 8300000, guid: df0a2f9fd38563a438954db3e3630792, type: 3}
   engranajeCorrecto: {fileID: 8300000, guid: 51f77e5773496b64ca15d985f47fa42e, type: 3}
   engranajeIncorrecto: {fileID: 8300000, guid: 6e6b6694fec659e48b5310716bc25b2c, type: 3}
-  voices: {fileID: 1154414529}
+  voices:
+  - {fileID: 1154414529}
+  - {fileID: 1154414532}
+  - {fileID: 1154414531}
+  - {fileID: 1154414530}
+  - {fileID: 1154414534}
+  - {fileID: 1154414533}
   Distortion: {fileID: 24100000, guid: 373c9b924cbbf4b428e3cf34d1c06a06, type: 2}
-  Phase1: {fileID: -2623302728700623045, guid: 373c9b924cbbf4b428e3cf34d1c06a06, type: 2}
-  Phase2: {fileID: 6219769815774354732, guid: 373c9b924cbbf4b428e3cf34d1c06a06, type: 2}
-  Phase3: {fileID: -8923664392003117795, guid: 373c9b924cbbf4b428e3cf34d1c06a06, type: 2}
-  Phase4: {fileID: 3393314324537323135, guid: 373c9b924cbbf4b428e3cf34d1c06a06, type: 2}
+  Phase1: {fileID: 6542859765344334416, guid: 373c9b924cbbf4b428e3cf34d1c06a06, type: 2}
+  Phase2: {fileID: -5498508411154048597, guid: 373c9b924cbbf4b428e3cf34d1c06a06, type: 2}
+  Phase3: {fileID: 7631906279094971935, guid: 373c9b924cbbf4b428e3cf34d1c06a06, type: 2}
+  Phase4: {fileID: -4971125216984904300, guid: 373c9b924cbbf4b428e3cf34d1c06a06, type: 2}
 --- !u!82 &1154414529
 AudioSource:
   m_ObjectHideFlags: 0
@@ -26084,13 +26042,498 @@ AudioSource:
   m_GameObject: {fileID: 1154414524}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 24300002, guid: 373c9b924cbbf4b428e3cf34d1c06a06,
+  OutputAudioMixerGroup: {fileID: -5593363595123121836, guid: 373c9b924cbbf4b428e3cf34d1c06a06,
     type: 2}
-  m_audioClip: {fileID: 8300000, guid: 32427bce6ff4fa942bacea301bd5f312, type: 3}
-  m_PlayOnAwake: 1
+  m_audioClip: {fileID: 8300000, guid: 4a5bdd4ef0e7fa14798a54639abe317c, type: 3}
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!82 &1154414530
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1154414524}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: -2062126218969318064, guid: 373c9b924cbbf4b428e3cf34d1c06a06,
+    type: 2}
+  m_audioClip: {fileID: 8300000, guid: 77f1270b639b85a47b884087d871bd98, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!82 &1154414531
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1154414524}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 5632111522291511652, guid: 373c9b924cbbf4b428e3cf34d1c06a06,
+    type: 2}
+  m_audioClip: {fileID: 8300000, guid: 65a0e429c8fcd474a8379aa0121f5989, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!82 &1154414532
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1154414524}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 8741775226062976229, guid: 373c9b924cbbf4b428e3cf34d1c06a06,
+    type: 2}
+  m_audioClip: {fileID: 8300000, guid: 7e835c58062dabb409ea90ce959e7735, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!82 &1154414533
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1154414524}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: -3465668044128296317, guid: 373c9b924cbbf4b428e3cf34d1c06a06,
+    type: 2}
+  m_audioClip: {fileID: 8300000, guid: f3eb3b11e0cf8e543aa4ba9eebed0f0a, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!82 &1154414534
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1154414524}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 2641484545303948416, guid: 373c9b924cbbf4b428e3cf34d1c06a06,
+    type: 2}
+  m_audioClip: {fileID: 8300000, guid: 9118268b5ab15fa45a4bb14b4505f6e3, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -26781,7 +27224,6 @@ MonoBehaviour:
   m_Material: {fileID: 2100000, guid: 55029faa3d5e4944692cb20920e824a0, type: 2}
   m_Color: {r: 0.14658241, g: 0.19110566, b: 0.509434, a: 1}
   m_RaycastTarget: 0
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -26921,6 +27363,7 @@ MonoBehaviour:
   alternativeAngleCorrect2: 91
   myParent: {fileID: 0}
   rotateController: {fileID: 0}
+  PhaseDistortion: 0
 --- !u!114 &1221379564
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27738,7 +28181,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 0.375, g: 0.50000006, b: 0.75, a: 1}
   m_RaycastTarget: 0
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -28256,7 +28698,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 0.375, g: 0.50000006, b: 0.75, a: 1}
   m_RaycastTarget: 0
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -28465,7 +28906,6 @@ MonoBehaviour:
   m_Material: {fileID: 2100000, guid: 55029faa3d5e4944692cb20920e824a0, type: 2}
   m_Color: {r: 0.5, g: 0.14386791, b: 0.44738322, a: 1}
   m_RaycastTarget: 0
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -28668,7 +29108,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 0
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -29029,7 +29468,6 @@ MonoBehaviour:
   m_Material: {fileID: 2100000, guid: 55029faa3d5e4944692cb20920e824a0, type: 2}
   m_Color: {r: 0.14658241, g: 0.19110566, b: 0.509434, a: 1}
   m_RaycastTarget: 0
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -29198,7 +29636,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 0
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -29295,7 +29732,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1398649902}
-  m_LocalRotation: {x: 0.031913504, y: -0.7207801, z: -0.030628465, w: 0.6917511}
+  m_LocalRotation: {x: 0.031913903, y: -0.72077996, z: -0.030628597, w: 0.6917511}
   m_LocalPosition: {x: -0.188, y: 1.794, z: 4.772}
   m_LocalScale: {x: 0.099999994, y: 0.09999999, z: 0.099999994}
   m_Children:
@@ -29550,7 +29987,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_RaycastTarget: 0
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -33674,7 +34110,6 @@ MonoBehaviour:
   m_Material: {fileID: 2100000, guid: 55029faa3d5e4944692cb20920e824a0, type: 2}
   m_Color: {r: 0.5, g: 0.14386791, b: 0.44738322, a: 1}
   m_RaycastTarget: 0
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -34245,7 +34680,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 0
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -34974,7 +35408,6 @@ MonoBehaviour:
   m_Material: {fileID: 2100000, guid: 55029faa3d5e4944692cb20920e824a0, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 0
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -35524,7 +35957,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 0
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -35974,7 +36406,6 @@ MonoBehaviour:
   m_Material: {fileID: 2100000, guid: 55029faa3d5e4944692cb20920e824a0, type: 2}
   m_Color: {r: 0.6020826, g: 0.60381645, b: 0.6226415, a: 1}
   m_RaycastTarget: 0
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -36216,7 +36647,6 @@ MonoBehaviour:
   m_Material: {fileID: 2100000, guid: 55029faa3d5e4944692cb20920e824a0, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 0
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -37026,7 +37456,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 0
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -40333,6 +40762,7 @@ MonoBehaviour:
   alternativeAngleCorrect2: 999
   myParent: {fileID: 0}
   rotateController: {fileID: 0}
+  PhaseDistortion: 0
 --- !u!114 &1708209858
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40791,7 +41221,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1729616887}
-  m_LocalRotation: {x: -0.08497328, y: -0.9058033, z: 0.03876933, w: 0.4132757}
+  m_LocalRotation: {x: -0.08497321, y: -0.90580344, z: 0.038769282, w: 0.41327554}
   m_LocalPosition: {x: -3.878, y: 3.32, z: 4.669}
   m_LocalScale: {x: 0.1, y: 0.099999994, z: 0.09999999}
   m_Children:
@@ -41079,7 +41509,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 0
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -41354,7 +41783,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 0
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -42056,7 +42484,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 0
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -42391,7 +42818,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 0.375, g: 0.50000006, b: 0.75, a: 1}
   m_RaycastTarget: 0
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -42485,7 +42911,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_RaycastTarget: 0
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -42643,7 +43068,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 0
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -43286,7 +43710,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 0
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -43542,7 +43965,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 0.375, g: 0.50000006, b: 0.75, a: 1}
   m_RaycastTarget: 0
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -43751,7 +44173,6 @@ MonoBehaviour:
   m_Material: {fileID: 2100000, guid: 55029faa3d5e4944692cb20920e824a0, type: 2}
   m_Color: {r: 0.5, g: 0.14386791, b: 0.44738322, a: 1}
   m_RaycastTarget: 0
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -44190,7 +44611,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 0
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -44306,7 +44726,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1922924116}
-  m_LocalRotation: {x: 0.026122527, y: -0.3841632, z: -0.06261095, w: 0.92076933}
+  m_LocalRotation: {x: 0.026122605, y: -0.3841631, z: -0.06261091, w: 0.9207694}
   m_LocalPosition: {x: 4.464, y: 1.333, z: 4.71}
   m_LocalScale: {x: 0.099999994, y: 0.10000001, z: 0.1}
   m_Children:
@@ -44497,6 +44917,7 @@ MonoBehaviour:
   alternativeAngleCorrect2: 999
   myParent: {fileID: 0}
   rotateController: {fileID: 0}
+  PhaseDistortion: 0
 --- !u!114 &1928622919
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45192,7 +45613,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 0
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -45428,7 +45848,6 @@ MonoBehaviour:
   m_Material: {fileID: 2100000, guid: c76d2ede1266c7b49a68c755c1cae05e, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 0
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -45645,7 +46064,6 @@ MonoBehaviour:
   m_Material: {fileID: 2100000, guid: 55029faa3d5e4944692cb20920e824a0, type: 2}
   m_Color: {r: 0.5, g: 0.14386791, b: 0.44738322, a: 1}
   m_RaycastTarget: 0
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -45932,7 +46350,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 0
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -46152,7 +46569,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 0.89178467, g: 0, b: 1, a: 1}
   m_RaycastTarget: 0
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -46327,7 +46743,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 0
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -47663,7 +48078,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3513676740699825493}
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -0.0273, y: 0.253, z: -0.591}
+  m_LocalPosition: {x: 0.229, y: 0.214, z: -0.59}
   m_LocalScale: {x: 0.4210327, y: 0.3267257, z: 0.4837355}
   m_Children: []
   m_Father: {fileID: 303832330}
@@ -47749,8 +48164,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   outlineMode: 0
-  outlineColor: {r: 0, g: 0.9233861, b: 1, a: 1}
-  outlineWidth: 2
+  outlineColor: {r: 0.38205135, g: 0.38679248, b: 0.33388218, a: 1}
+  outlineWidth: 3
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
@@ -51168,7 +51583,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5146032360152707127}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.027, y: 0.246, z: -0.561}
+  m_LocalPosition: {x: 0.229, y: 0.207, z: -0.56}
   m_LocalScale: {x: 0.31996632, y: 0.42896727, z: 0.48455}
   m_Children:
   - {fileID: 8725343185758061703}

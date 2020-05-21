@@ -8,7 +8,7 @@ public class PuzzleEngranajesController : MonoBehaviour
     public int[] combinacionesActuales; //estos valores seran los que vayan equivaliendo dependiendo de las acciones del usuario. Al final se validaran si estos valores coinciden con los correctos para validar o no el puzzle
     public int[] currentPositionData; //1 si el engranaje esta en su posicion correcta, 2 si esta incorrecto
 
-
+    Animator palancaAnimation;
     public bool checking = false;
     public static PuzzleEngranajesController instance;
     public PasoPuzzles pasoPuzzles;
@@ -26,6 +26,7 @@ public class PuzzleEngranajesController : MonoBehaviour
         {
             instance = this;
         }
+        palancaAnimation = GetComponent<Animator>();
     }
 
     private void Start()
@@ -66,28 +67,38 @@ public class PuzzleEngranajesController : MonoBehaviour
     public void CheckPuzzle()
     {
         checking = true;
-
+        palancaAnimation.SetTrigger("Palanca");
         if(combinacionesActuales[0]==combinacionesCorrectas[0] &&
         combinacionesActuales[1] == combinacionesCorrectas[1] &&
         combinacionesActuales[2] == combinacionesCorrectas[2])
         {
             if(currentPositionData[0]==1 && currentPositionData[1] == 1 && currentPositionData[2] == 1)
             {
-                Debug.Log("puzzle correcto");
                 sManager.EngranajeCorrecto();
-                StartCoroutine(Wait(2.5f,true));
-                
+                StartCoroutine(Wait(2.5f,true));           
             }
             else
             {
-                Debug.Log("Puzzle incorrecto");
+                if (sManager.PhaseDistortion < 4)
+                {
+                    sManager.PhaseDistortion++;
+                    
+                }
+                sManager._Distortion();
+                sManager.PlayVoices();
                 sManager.EngranajeIncorrecto();
                 StartCoroutine(Wait(2.5f,false));
             }
         }
         else
         {
-            Debug.Log("Rotaciones incorrectas");
+            if (sManager.PhaseDistortion < 4)
+            {
+                sManager.PhaseDistortion++;
+                
+            }
+            sManager._Distortion();
+            sManager.PlayVoices();
             sManager.EngranajeIncorrecto();
             foreach (GameObject flechas in arrows)
             {
