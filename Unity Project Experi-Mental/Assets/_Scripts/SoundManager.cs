@@ -46,7 +46,7 @@ public class SoundManager : MonoBehaviour
     [Header("Voices")]
     public AudioSource[] voices;
     public AudioMixer Distortion;
-    public AudioMixerSnapshot Phase1, Phase2, Phase3, Phase4;
+    public AudioMixerSnapshot Phase1, Phase2;
     public int PhaseDistortion = 0;
     private void Update()
     {
@@ -162,16 +162,6 @@ public class SoundManager : MonoBehaviour
             case 2:
                 {
                     Phase2.TransitionTo(0.25f);
-                    break;
-                }
-            case 3:
-                {
-                    Phase3.TransitionTo(0.25f);
-                    break;
-                }
-            case 4:
-                {
-                    Phase4.TransitionTo(0.25f);
                     break;
                 }
         }

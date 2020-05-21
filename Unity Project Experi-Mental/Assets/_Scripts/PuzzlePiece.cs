@@ -38,7 +38,6 @@ public class PuzzlePiece : MonoBehaviour
         {
             press = false;
             rotateController.currentDraggingPiece = null;
-            //ansietyController.AnsietyLevel(5);
         }
     }
     private void Update()
@@ -90,7 +89,7 @@ public class PuzzlePiece : MonoBehaviour
                         piece.transform.position = startPos;
                         piece.transform.rotation = Quaternion.Euler(startRot);
                         Smanager.TangramNoEncaja();
-                        if (Smanager.PhaseDistortion < 4)
+                        if (Smanager.PhaseDistortion < 2)
                         {
                             Smanager.PhaseDistortion++;   
                         }
