@@ -44,9 +44,10 @@ public class SoundManager : MonoBehaviour
     public AudioClip engranajeIncorrecto;
 
     [Header("Voices")]
-    public AudioSource voices;
+    public AudioSource[] voices;
     public AudioMixer Distortion;
-    public AudioMixerSnapshot Phase1, Phase2, Phase3, Phase4;
+    public AudioMixerSnapshot Phase1, Phase2;
+    public int PhaseDistortion = 0;
     private void Update()
     {
         if (!relojPlay && sAnsiedad.value >= 240)
@@ -145,20 +146,32 @@ public class SoundManager : MonoBehaviour
         effectos.PlayOneShot(tangramTerminado);
     }
 
-    public void DistortionFase1()
+    public void _Distortion()
     {
-        Phase1.TransitionTo(0.25f);
+        foreach(AudioSource _voices in voices)
+        {
+            _voices.Play();
+        }
+        switch(PhaseDistortion)
+        {
+            case 1:
+                {
+                    Phase1.TransitionTo(0.25f);
+                    break;
+                }
+            case 2:
+                {
+                    Phase2.TransitionTo(0.25f);
+                    break;
+                }
+        }
+        
     }
-    public void DistortionFase2()
+    public void PlayVoices()
     {
-        Phase2.TransitionTo(0.25f);
-    }
-    public void DistortionFase3()
-    {
-        Phase3.TransitionTo(0.25f);
-    }
-    public void DistortionFase4()
-    {
-        Phase4.TransitionTo(0.25f);
+        foreach (AudioSource _voices in voices)
+        {
+            _voices.Play();    
+        }
     }
 }
