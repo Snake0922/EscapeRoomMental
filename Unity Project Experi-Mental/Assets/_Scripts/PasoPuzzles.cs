@@ -31,7 +31,8 @@ public class PasoPuzzles : MonoBehaviour
     [Header("Lineas")]
     public GameObject Lin_obj;
     public GameObject outlineLlave3;
-
+    public Animator door;
+    public Light endingLight;
     private void Awake()
     {
         Llaves.SetActive(false);
@@ -126,8 +127,17 @@ public class PasoPuzzles : MonoBehaviour
     }
     public void TerminadoEngranajes()
     {
-        Llaves.SetActive(true);
-        Llaves.transform.position = outlineLlave1.transform.position;
+        StartCoroutine(FinishGame());
+        //Llaves.SetActive(true);
+        //Llaves.transform.position = outlineLlave1.transform.position;
+        
+    }
+    IEnumerator FinishGame()
+    {
         Engra_obj.SetActive(false);
+        yield return new WaitForSeconds(0.5f);
+        door.SetTrigger("Win");
+        yield return new WaitForSeconds(0.5f);
+        endingLight.enabled = true;
     }
 }

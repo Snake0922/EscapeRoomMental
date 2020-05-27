@@ -6,8 +6,7 @@ public class PuzzleEngranajesController : MonoBehaviour
 {
     public int[] combinacionesCorrectas; //la  cantidad de enteros serán equivalentes al mismo numero de engranajes, y será 1 para los engranajes que deban girar con el reloj, y -1 para los engranajes que deban girar contrario al reloj
     public int[] combinacionesActuales; //estos valores seran los que vayan equivaliendo dependiendo de las acciones del usuario. Al final se validaran si estos valores coinciden con los correctos para validar o no el puzzle
-    public int[] currentPositionData; //1 si el engranaje esta en su posicion correcta, 2 si esta incorrecto
-    public Animator door;
+    public int[] currentPositionData; //1 si el engranaje esta en su posicion correcta, 2 si esta incorrecto 
     Animator palancaAnimation;
     public bool checking = false;
     public static PuzzleEngranajesController instance;
@@ -16,6 +15,7 @@ public class PuzzleEngranajesController : MonoBehaviour
     public GameObject[] arrows;
     public Vector3[] posicionesEngranajesCorrectas = new Vector3[3];
     public SoundManager sManager;
+    
     private void Awake()
     {
         if(instance!=null)
@@ -63,12 +63,14 @@ public class PuzzleEngranajesController : MonoBehaviour
         DefaultValues();
         if(State==true)
         {
-            door.SetTrigger("Win");
             pasoPuzzles.TerminadoEngranajes();
-            
+                 
         }
             
     }
+
+    
+
     public void CheckPuzzle()
     {
         checking = true;
