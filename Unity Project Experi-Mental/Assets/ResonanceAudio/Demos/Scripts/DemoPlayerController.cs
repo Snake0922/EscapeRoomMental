@@ -17,7 +17,8 @@ using UnityEngine;
 /// First-person player controller for Resonance Audio demo scenes.
 [RequireComponent(typeof(CharacterController))]
 public class DemoPlayerController : MonoBehaviour {
-  /// Camera.
+    /// Camera.
+    public bool usarCharacter = true;
   public Camera mainCamera;
 
   // Character controller.
@@ -36,8 +37,11 @@ public class DemoPlayerController : MonoBehaviour {
   // Camera rotation sensitivity.
   private const float sensitivity = 2.0f;
 
-  void Start() {
-    characterController = GetComponent<CharacterController>();
+  void Start()
+    {
+    if (usarCharacter)
+        characterController = GetComponent<CharacterController>();
+
     Vector3 rotation = mainCamera.transform.localRotation.eulerAngles;
     rotationX = rotation.x;
     rotationY = rotation.y;

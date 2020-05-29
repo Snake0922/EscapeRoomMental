@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using UnityEngine.Rendering.Universal;
+using UnityEngine.Rendering;
 
 public class Apuntar : MonoBehaviour
 {
@@ -19,10 +21,17 @@ public class Apuntar : MonoBehaviour
     public float velocidad = 1;
     private Vector3 move;
     public int currentPuzzle = 0;
+
+    private UniversalRenderPipelineAsset renderAsset;
+
     private void Awake()
     {
         anim = Point.GetComponent<Animator>();
         cPointerDist = cPointer.planeDistance;
+
+        renderAsset = GraphicsSettings.renderPipelineAsset as UniversalRenderPipelineAsset;
+        AudioListener.volume = PlayerPrefs.GetFloat("audioMaster");
+        renderAsset.renderScale = PlayerPrefs.GetFloat("graficasMaster");
     }
 
     private void Update()
@@ -121,6 +130,9 @@ public class Apuntar : MonoBehaviour
         move = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
         move = cControler.transform.TransformDirection(move);
 
-        cControler.Move(move * velocidad * Time.unscaledDeltaTime);
+        if (cControler.enabled)
+        {
+            cControler.Move(move * velocidad * Time.unscaledDeltaTime);
+        }
     }
 }
