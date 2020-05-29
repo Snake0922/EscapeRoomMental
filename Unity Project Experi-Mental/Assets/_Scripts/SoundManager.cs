@@ -27,6 +27,7 @@ public class SoundManager : MonoBehaviour
     public AudioClip corazon2;
     [Space]
     public AudioClip llaves;
+    public AudioClip win;
     [Header("tangram")]
     public AudioClip tangram_agarrar;
     public AudioClip tangram_SiEncaja;
@@ -42,7 +43,7 @@ public class SoundManager : MonoBehaviour
     public AudioClip moverEngranaje;
     public AudioClip engranajeCorrecto;
     public AudioClip engranajeIncorrecto;
-
+    public AudioClip doorOpening;
     [Header("Voices")]
     public AudioSource[] voices;
     public AudioMixer Distortion;
@@ -139,6 +140,20 @@ public class SoundManager : MonoBehaviour
     {
         effectos.PlayOneShot(engranajeCorrecto);
     }
+    public void OpenDoor()
+    {
+        effectos.PlayOneShot(doorOpening);
+    }
+    public void PlayWinSound()
+    {
+        OpenDoor();
+        StartCoroutine(WinGame(0.5f));
+    }
+    IEnumerator WinGame(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        effectos.PlayOneShot(win);
+    }
     public void EngranajeIncorrecto()
     {
         effectos.PlayOneShot(engranajeIncorrecto);
@@ -148,12 +163,24 @@ public class SoundManager : MonoBehaviour
         effectos.PlayOneShot(tangramTerminado);
     }
 
-    public void _Distortion()
+    public void _Distortion(bool Good)
     {
-        foreach(AudioSource _voices in voices)
+        if(!Good)
         {
-            _voices.Play();
+            int voicePlayed = Random.Range(2, voices.Length);
+            if(!voices[voicePlayed].isPlaying)
+            {
+                voices[voicePlayed].Play();
+            }
+            
         }
+        else
+        {
+            int voicePlayed = Random.Range(0, 2);
+            if (!voices[voicePlayed].isPlaying)
+                voices[voicePlayed].Play();
+        }
+        
         switch(PhaseDistortion)
         {
             case 1:
@@ -166,14 +193,6 @@ public class SoundManager : MonoBehaviour
                     Phase2.TransitionTo(0.25f);
                     break;
                 }
-        }
-        
-    }
-    public void PlayVoices()
-    {
-        foreach (AudioSource _voices in voices)
-        {
-            _voices.Play();    
-        }
-    }
+        }   
+    }  
 }

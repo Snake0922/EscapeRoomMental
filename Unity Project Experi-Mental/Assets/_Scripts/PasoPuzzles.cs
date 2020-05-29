@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.UIElements;
 using UnityEngine.Rendering.Universal;
 using UnityEngine.Rendering;
-
+using UnityEngine.SceneManagement;
 public class PasoPuzzles : MonoBehaviour
 {
     public GameObject Llaves;
@@ -31,7 +31,9 @@ public class PasoPuzzles : MonoBehaviour
     [Header("Lineas")]
     public GameObject Lin_obj;
     public GameObject outlineLlave3;
-
+    public Animator door;
+    public Light endingLight;
+    public SoundManager soundManager;
     private void Awake()
     {
         Llaves.SetActive(false);
@@ -126,8 +128,21 @@ public class PasoPuzzles : MonoBehaviour
     }
     public void TerminadoEngranajes()
     {
-        Llaves.SetActive(true);
-        Llaves.transform.position = outlineLlave1.transform.position;
+        StartCoroutine(FinishGame());
+        //Llaves.SetActive(true);
+        //Llaves.transform.position = outlineLlave1.transform.position;
+        
+    }
+    IEnumerator FinishGame()
+    {
         Engra_obj.SetActive(false);
+        yield return new WaitForSeconds(0.5f);
+        door.SetTrigger("Win");
+        soundManager.PlayWinSound();
+        yield return new WaitForSeconds(0.5f);
+        endingLight.enabled = true;
+        yield return new WaitForSeconds(3.5f);
+        SceneManager.LoadScene(0);
+        
     }
 }

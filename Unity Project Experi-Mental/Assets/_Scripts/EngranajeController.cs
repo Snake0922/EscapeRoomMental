@@ -38,7 +38,6 @@ public class EngranajeController : MonoBehaviour
         if(puzzleEngranajesController.checking)
         {
             transform.RotateAround(transform.position, Vector3.right, (speed* puzzleEngranajesController.combinacionesActuales[identificador]) * Time.deltaTime);
-            //sManager.GirarEngranaje();
         }
         
         if (Input.GetKeyDown(KeyCode.E))
@@ -48,7 +47,6 @@ public class EngranajeController : MonoBehaviour
                 puzzleEngranajesController.combinacionesActuales[identificador] = 1;
                 FlechaSentidoReloj.SetActive(true);
                 FlechaSentidoContraReloj.SetActive(false);
-                //sManager.CambiarRotacion();
                 if(puzzleEngranajesController.combinacionesActuales[identificador]==puzzleEngranajesController.combinacionesCorrectas[identificador])
                 {
                     AumentarLuz();
@@ -67,7 +65,6 @@ public class EngranajeController : MonoBehaviour
                 puzzleEngranajesController.combinacionesActuales[identificador] = -1;
                 FlechaSentidoReloj.SetActive(false);
                 FlechaSentidoContraReloj.SetActive(true);
-                //sManager.CambiarRotacion();
                 if (puzzleEngranajesController.combinacionesActuales[identificador] == puzzleEngranajesController.combinacionesCorrectas[identificador])
                 {
                     AumentarLuz();
@@ -83,7 +80,6 @@ public class EngranajeController : MonoBehaviour
             if (Ready && previousGear!=null)
             {
                 Vector3 currentPositionBeforeToChange = transform.position;
-                //sManager.MoverEngranaje();
                 StartCoroutine(slide(transform, previousGear.transform.position));
                 StartCoroutine(slide(previousGear.transform, currentPositionBeforeToChange));
             }
@@ -94,7 +90,6 @@ public class EngranajeController : MonoBehaviour
             if (Ready && nextGear != null)
             {
                 Vector3 currentPositionBeforeToChange = transform.position;
-                //sManager.MoverEngranaje();
                 StartCoroutine(slide(transform, nextGear.transform.position));
                 StartCoroutine(slide(nextGear.transform, currentPositionBeforeToChange));
             }
@@ -141,8 +136,7 @@ public class EngranajeController : MonoBehaviour
         {
             sManager.PhaseDistortion--;
         }
-        sManager._Distortion();
-        sManager.PlayVoices();
+        sManager._Distortion(true);
         if (myLight.intensity == 0)
         {
             myLight.intensity = 0.75f;
@@ -164,8 +158,7 @@ public class EngranajeController : MonoBehaviour
             sManager.PhaseDistortion++;
 
         }
-        sManager._Distortion();
-        sManager.PlayVoices();
+        sManager._Distortion(false);
         if (myLight.intensity == 0)
         {
             return;

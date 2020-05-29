@@ -53,7 +53,11 @@ public class Apuntar : MonoBehaviour
                     }
                     if (currentPuzzle == 2)
                     {
-                        objMirando.GetComponent<ActivarAccion>().OnTriggerExit.Invoke();
+                        if (objMirando.GetComponent<ActivarAccion>()!=null)
+                        {
+                            objMirando.GetComponent<ActivarAccion>().OnTriggerExit.Invoke();
+                        }
+                        
                     }
                 }
                

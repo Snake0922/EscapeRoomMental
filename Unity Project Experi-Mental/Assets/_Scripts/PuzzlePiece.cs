@@ -73,8 +73,7 @@ public class PuzzlePiece : MonoBehaviour
                             {
                                 Smanager.PhaseDistortion--;  
                             }
-                            Smanager._Distortion();
-                            Smanager.PlayVoices();
+                            Smanager._Distortion(true);
                             this.enabled = false;
                         }
                         else
@@ -93,8 +92,7 @@ public class PuzzlePiece : MonoBehaviour
                         {
                             Smanager.PhaseDistortion++;   
                         }
-                        Smanager._Distortion();
-                        Smanager.PlayVoices();
+                        Smanager._Distortion(false);
                     }
                 }
             }   
