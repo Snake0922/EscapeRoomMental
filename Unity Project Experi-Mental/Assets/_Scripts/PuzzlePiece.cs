@@ -69,11 +69,11 @@ public class PuzzlePiece : MonoBehaviour
                         {
                             piecesCompleted++;  
                             Smanager.TangramEncaja();
-                            if (Smanager.PhaseDistortion > 0)
-                            {
-                                Smanager.PhaseDistortion--;  
-                            }
-                            Smanager._Distortion(true);
+                            //if (Smanager.PhaseDistortion > 0)
+                            //{
+                            //    Smanager.PhaseDistortion--;  
+                            //}
+                            Smanager._Distortion2();
                             this.enabled = false;
                         }
                         else
@@ -88,11 +88,11 @@ public class PuzzlePiece : MonoBehaviour
                         piece.transform.position = startPos;
                         piece.transform.rotation = Quaternion.Euler(startRot);
                         Smanager.TangramNoEncaja();
-                        if (Smanager.PhaseDistortion < 2)
-                        {
-                            Smanager.PhaseDistortion++;   
-                        }
-                        Smanager._Distortion(false);
+                        //if (Smanager.PhaseDistortion < 2)
+                        //{
+                        //    Smanager.PhaseDistortion++;   
+                        //}
+                        Smanager._Distortion2();
                     }
                 }
             }   
