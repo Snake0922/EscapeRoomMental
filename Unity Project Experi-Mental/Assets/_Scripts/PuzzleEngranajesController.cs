@@ -63,8 +63,7 @@ public class PuzzleEngranajesController : MonoBehaviour
         DefaultValues();
         if(State==true)
         {
-            pasoPuzzles.TerminadoEngranajes();
-                 
+            pasoPuzzles.TerminadoEngranajes();         
         }
             
     }
@@ -90,8 +89,7 @@ public class PuzzleEngranajesController : MonoBehaviour
                 {
                     sManager.PhaseDistortion++;
                 }
-                sManager._Distortion();
-                sManager.PlayVoices();
+                sManager._Distortion(false);
                 sManager.EngranajeIncorrecto();
                 StartCoroutine(Wait(2.5f,false));
             }
@@ -102,8 +100,7 @@ public class PuzzleEngranajesController : MonoBehaviour
             {
                 sManager.PhaseDistortion++;      
             }
-            sManager._Distortion();
-            sManager.PlayVoices();
+            sManager._Distortion(false);
             sManager.EngranajeIncorrecto();
             foreach (GameObject flechas in arrows)
             {
