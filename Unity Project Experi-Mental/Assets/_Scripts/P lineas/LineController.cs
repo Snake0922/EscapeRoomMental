@@ -134,6 +134,8 @@ public class LineController : MonoBehaviour
         }
         else
         {
+            //Debug.Log("no papu");
+            pPuzzle.ReponerLineas();
             return false;
         }
     }

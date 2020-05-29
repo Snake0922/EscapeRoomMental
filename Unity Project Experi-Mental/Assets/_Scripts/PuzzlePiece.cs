@@ -84,7 +84,7 @@ public class PuzzlePiece : MonoBehaviour
                     }
                     else
                     {
-                        Debug.Log(myParent.transform.rotation.eulerAngles.z);
+                        //Debug.Log(myParent.transform.rotation.eulerAngles.z);
                         piece.transform.position = startPos;
                         piece.transform.rotation = Quaternion.Euler(startRot);
                         Smanager.TangramNoEncaja();

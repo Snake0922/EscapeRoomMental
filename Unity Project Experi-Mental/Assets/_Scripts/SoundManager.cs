@@ -49,9 +49,23 @@ public class SoundManager : MonoBehaviour
     public AudioMixer Distortion;
     public AudioMixerSnapshot Phase1, Phase2;
     public int PhaseDistortion = 0;
+
+    private float parte2;
+    private float parte3;
+    private float parte4;
+
+    public int distorcion = 0;
+
+    private void Start()
+    {
+        parte2 = sAnsiedad.maxValue * 0.25f;
+        parte3 = sAnsiedad.maxValue * 0.5f;
+        parte4 = sAnsiedad.maxValue * 0.75f;
+    }
+
     private void Update()
     {
-        Debug.Log("revisar que paso con estos corazones y sonidos :v");
+        //Debug.Log("revisar que paso con estos corazones y sonidos :v");
 
         if (!relojPlay && sAnsiedad.value >= 240)
         {
@@ -66,26 +80,30 @@ public class SoundManager : MonoBehaviour
             respiraciones.Play();
             corazones.Play();
             respiracion1Play = true;
+            //Debug.Log("parte 1");
         }
-        if (!respiracion2Play && sAnsiedad.value >= 75)
+        if (!respiracion2Play && sAnsiedad.value >= parte2)
         {
             respiraciones.clip = respiracion2;
             respiraciones.Play();
             respiracion2Play = true;
+            //Debug.Log("parte 2");
         }
-        if (!respiracion3Play && sAnsiedad.value >= 150)
+        if (!respiracion3Play && sAnsiedad.value >= parte3)
         {
             respiraciones.clip = respiracion3;
             corazones.clip = corazon2;
             respiraciones.Play();
             corazones.Play();
             respiracion3Play = true;
+            //Debug.Log("parte 3");
         }
-        if (!respiracion4Play && sAnsiedad.value >= 225)
+        if (!respiracion4Play && sAnsiedad.value >= parte4)
         {
             respiraciones.clip = respiracion4;
             respiraciones.Play();
             respiracion4Play = true;
+            //Debug.Log("parte 4");
         }
     }
 
@@ -195,4 +213,23 @@ public class SoundManager : MonoBehaviour
                 }
         }   
     }  
+
+    public void _Distortion2()
+    {
+        //effectos.PlayOneShot();
+        distorcion += 1;
+        if (distorcion == 1)
+        {
+            int val = Random.Range(0, voices.Length);
+            AudioClip clip = voices[val].clip;
+            effectos.PlayOneShot(clip);
+            StartCoroutine(waitDistor());
+        }
+    }
+
+    IEnumerator waitDistor()
+    {
+        yield return new WaitForSecondsRealtime(1);
+        distorcion = 0;
+    }
 }

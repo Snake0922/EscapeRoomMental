@@ -6,6 +6,8 @@ using UnityEngine.UIElements;
 using UnityEngine.Rendering.Universal;
 using UnityEngine.Rendering;
 using UnityEngine.SceneManagement;
+using UnityEngine.Animations;
+
 public class PasoPuzzles : MonoBehaviour
 {
     public GameObject Llaves;
@@ -34,6 +36,17 @@ public class PasoPuzzles : MonoBehaviour
     public Animator door;
     public Light endingLight;
     public SoundManager soundManager;
+
+    [Space]
+    public GameObject PuzzleLineas;
+    public Camera cameraMain;
+    public RectTransform Point;
+    public Apuntar puntar;
+
+    public Transform[] objetos;
+    private ConstraintSource sour;
+    private GameObject obLineas;
+
     private void Awake()
     {
         Llaves.SetActive(false);
@@ -52,18 +65,51 @@ public class PasoPuzzles : MonoBehaviour
         outlineLlave3.SetActive(false);
     }
 
+    private void Start()
+    {
+        obLineas = Instantiate(PuzzleLineas);
+        objetos = obLineas.GetComponentsInChildren<Transform>(true);
+        sour.weight = 1;
+        sour.sourceTransform = Point;
+        objetos[1].GetComponent<Canvas>().worldCamera = cameraMain;
+        objetos[5].GetComponent<Canvas>().worldCamera = cameraMain;
+        objetos[6].GetComponent<PositionConstraint>().SetSource(0, sour);
+        obLineas.GetComponent<LineController>().sManager = GetComponent<SoundManager>();
+        obLineas.GetComponent<LineController>().pPuzzle = this;
+        objetos[44].GetComponent<currentPuzzleController>().apuntar = puntar;
+        Lin_obj = obLineas;
+    }
+
+    public void ReponerLineas()
+    {
+        soundManager._Distortion2();
+        Destroy(obLineas);
+        obLineas = Instantiate(PuzzleLineas);
+        obLineas.SetActive(true);
+        objetos = obLineas.GetComponentsInChildren<Transform>(true);
+        sour.weight = 1;
+        sour.sourceTransform = Point;
+        objetos[1].GetComponent<Canvas>().worldCamera = cameraMain;
+        objetos[5].GetComponent<Canvas>().worldCamera = cameraMain;
+        objetos[6].GetComponent<PositionConstraint>().SetSource(0, sour);
+        obLineas.GetComponent<LineController>().sManager = GetComponent<SoundManager>();
+        obLineas.GetComponent<LineController>().pPuzzle = this;
+        objetos[44].GetComponent<currentPuzzleController>().apuntar = puntar;
+        Lin_obj = obLineas;
+    }
+
     private void Update()
     {
-        if (barraEstres.value >= 50)
+        if (barraEstres.value >= 25)
         {
-            chromaticVal = ((barraEstres.value / 100) - 0.5f) * 2;
+            chromaticVal = ((barraEstres.value / 100) - 0.25f) * 2;
             chromatic.intensity.value = chromaticVal;
         }
         else if (chromatic.intensity.value != 0)
         {
             chromatic.intensity.value = 0;
         }
-        if (barraEstres.value >= 75)
+        if (barraEstres.value >= 25)
         {
             contrastVal = ((barraEstres.value / 100) - 0.75f) * 2;
             vig.intensity.value = contrastVal;
@@ -143,6 +189,7 @@ public class PasoPuzzles : MonoBehaviour
         endingLight.enabled = true;
         yield return new WaitForSeconds(3.5f);
         SceneManager.LoadScene(0);
-        
     }
+
+
 }
