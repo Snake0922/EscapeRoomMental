@@ -50,6 +50,8 @@ public class SoundManager : MonoBehaviour
     public int PhaseDistortion = 0;
     private void Update()
     {
+        Debug.Log("revisar que paso con estos corazones y sonidos :v");
+
         if (!relojPlay && sAnsiedad.value >= 240)
         {
             reloj.Play();
