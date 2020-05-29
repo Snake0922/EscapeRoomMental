@@ -24,16 +24,10 @@ public class IntroVideo : MonoBehaviour
         rTexture.Release();
 
         renderAsset = GraphicsSettings.renderPipelineAsset as UniversalRenderPipelineAsset;
-        if (!PlayerPrefs.HasKey("audioMaster"))
-        {
-            PlayerPrefs.SetFloat("audioMaster", volumenMaster);
-            PlayerPrefs.SetFloat("graficasMaster", graficasMaster);
-        }
-        else
-        {
-            AudioListener.volume = PlayerPrefs.GetFloat("audioMaster");
-            renderAsset.renderScale = PlayerPrefs.GetFloat("graficasMaster");
-        }
+        PlayerPrefs.SetFloat("audioMaster", volumenMaster);
+        AudioListener.volume = PlayerPrefs.GetFloat("audioMaster");
+        PlayerPrefs.SetFloat("graficasMaster", graficasMaster);
+        renderAsset.renderScale = PlayerPrefs.GetFloat("graficasMaster");
     }
 
     private void Start()
